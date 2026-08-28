@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { ClientSessionProvider } from "@/components/providers/session-provider";
 import { Toaster } from "sonner";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default function RootLayout({
           <ClientSessionProvider>
             {children}
             <Toaster richColors position="top-right" />
+            <SpeedInsights />
           </ClientSessionProvider>
         </ErrorBoundary>
       </body>
