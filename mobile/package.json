@@ -4,7 +4,6 @@
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
-    "tunnel": "expo start --tunnel",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
@@ -38,7 +37,6 @@
     "zustand": "^5.0.9"
   },
   "devDependencies": {
-    "@expo/ngrok": "^4.1.3",
     "@types/react": "~18.3.12",
     "typescript": "~5.9.2"
   },
