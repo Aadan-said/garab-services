@@ -32,31 +32,5 @@ Mashruucaan waxa uu ka kooban yahay laba qaybood oo waaweyn:
 
 ---
 
-## 🚀 Sida Loo Bilaabo (Getting Started)
-
-### 1. Web Application:
-```bash
-# Ku shub dependencies-ka
-npm install
-
-# Diyaari database-ka
-npx prisma generate
-npx prisma db push
-
-# Daaran Server-ka
-npm run dev
-```
-
-Fur browser-kaaga: `http://localhost:3000`
-
-### 2. Mobile Application:
-```bash
-cd mobile
-npm install
-npx expo start
-```
-
----
-
 ## 📄 Xuquuqda (License)
 © 2026 **Garab**. All rights reserved.
