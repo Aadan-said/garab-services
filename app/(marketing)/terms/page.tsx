@@ -19,7 +19,7 @@ export default function TermsPage() {
                         Shuruudaha <span className="bg-gradient-to-r from-primary via-blue-600 to-indigo-600 bg-clip-text text-transparent italic">Isticmaalka</span>
                     </h1>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-                        Fadlan si taxadar leh u akhri shuruudahan ka hor inta aanad bilaabin isticmaalka SomaliServices.
+                        Fadlan si taxadar leh u akhri shuruudahan ka hor inta aanad bilaabin isticmaalka Garab.
                     </p>
                 </div>
             </section>
@@ -38,7 +38,7 @@ export default function TermsPage() {
                                 1. Heshiiska Guud
                             </h2>
                             <div className="prose prose-slate dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
-                                <p>Isticmaalka SomaliServices waxay ka dhigan tahay inaad oggolaatay dhammaan shuruudaha halkan ku qoran. Haddii aanad oggolayn, fadlan ha isticmaalin madasheena. Waxaan xaq u leenahay inaan beddelno shuruudahan wakhti kasta.</p>
+                                <p>Isticmaalka Garab waxay ka dhigan tahay inaad oggolaatay dhammaan shuruudaha halkan ku qoran. Haddii aanad oggolayn, fadlan ha isticmaalin madasheena. Waxaan xaq u leenahay inaan beddelno shuruudahan wakhti kasta.</p>
                             </div>
                         </div>
 

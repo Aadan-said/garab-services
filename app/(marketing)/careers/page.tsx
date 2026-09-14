@@ -61,7 +61,7 @@ export default function CareersPage() {
                         <span className="bg-gradient-to-r from-primary via-blue-600 to-indigo-600 bg-clip-text text-transparent italic">Mustaqbalkaaga</span> Hadda.
                     </h1>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12">
-                        SomaliServices waa koox dhalinyaro firfircoon ah oo ka shaqaynaya sidii loo beddeli lahaa nolosha dadka Soomaaliyeed iyadoo la adeegsanayo tignoolajiyada.
+                        Garab waa koox dhalinyaro firfircoon ah oo ka shaqaynaya sidii loo beddeli lahaa nolosha dadka Soomaaliyeed iyadoo la adeegsanayo tignoolajiyada.
                     </p>
                     <div className="flex justify-center">
                         <Link href="#openings">
@@ -168,7 +168,7 @@ export default function CareersPage() {
                         <p className="text-xl text-white/80 mb-8">
                             Haddii aad tahay qof karti leh, nala soo xiriir oo noo sheeg sida aad wax ugu dari kartid Barnamij keena.
                         </p>
-                        <a href="mailto:careers@somaliservices.so">
+                        <a href="mailto:careers@garab.so">
                             <Button variant="outline" className="h-14 px-10 rounded-2xl text-lg font-bold border-white/30 text-black hover:bg-white/10">
                                 Noo Soo Dir Email
                             </Button>

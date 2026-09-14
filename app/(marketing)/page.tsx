@@ -37,7 +37,7 @@ export default function LandingPage() {
 
                         {/* Description */}
                         <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed font-medium">
-                            Lakulan Macmiil ama Xirfadle kugu haboon Somali Local services waa haqabtiraha bulshadeena somaliyeed sidii ay ku heli lahayd
+                            Lakulan Macmiil ama Xirfadle kugu haboon Garab waa haqabtiraha bulshadeena somaliyeed sidii ay ku heli lahayd
                             baranamij Digital aha lagu kalsoon yahay Dalbo isla markiiba si ammaan ah.
                         </p>
 

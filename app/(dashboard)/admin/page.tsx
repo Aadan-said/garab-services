@@ -135,7 +135,7 @@ export default function AdminDashboardPage() {
                     Admin <span className="text-primary">Analytics</span>
                 </h1>
                 <p className="text-muted-foreground font-medium">
-                    Ku soo dhowaw qaybta kormeerka guud ee Somali Services.
+                    Ku soo dhowaw qaybta kormeerka guud ee Garab.
                 </p>
             </div>
 

@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 Garab - Madasha Adeegyada Maxaliga ah (Local Services Platform)
 
-## Getting Started
+**Garab** waa madal casri ah oo isku xirta macaamiisha iyo xirfadlayaasha maxaliga ah ee ku nool Soomaaliya. Waxay u saamaxaysaa qoysaska iyo shakhsiyaadka inay si fudud, degdeg ah, oo ammaan ah ku helaan adeegyo tayo sare leh (sida korontada, tubooyinka, nadaafadda, dhismaha, iyo farsamooyin kale).
 
-First, run the development server:
+---
 
+## 📱 Qaybaha Mashruuca (Project Architecture)
+
+Mashruucaan waxa uu ka kooban yahay laba qaybood oo waaweyn:
+
+1. **🌐 Web Application (Next.js & React)**
+   - Bogagga suuq-geynta (Marketing Pages: Home, Services, About, Careers, Contact, Terms, Privacy)
+   - Client Portal (Dalbashada adeegyada, la socoshada shaqada)
+   - Provider Portal (Qabashada shaqooyinka, dakhliga, xaqiijinta)
+   - Admin Dashboard (Kormeerka guud, isticmaalayaasha, maamulka)
+   - Habka lacag-bixinta (EVC Plus, Sahal, Premier Bank, iwm)
+
+2. **📲 Mobile Application (React Native & Expo)**
+   - App loogu talagalay macmiilka iyo adeeg-bixiyaha
+   - Nidaamka wargelinta degdegga ah (Push Notifications)
+   - Khariidadaha iyo goobta (Location-based matching)
+   - Mobile Wallet & Payments
+
+---
+
+## 🛠️ Tignoolajiyada La Isticmaalay (Tech Stack)
+
+- **Frontend Web**: Next.js 15+ (App Router), React 19, Tailwind CSS, Lucide Icons, Framer Motion
+- **Mobile**: React Native, Expo Router, TypeScript, Reanimated, Async Storage
+- **Backend / Database**: Next.js Server Actions & API Routes, Prisma ORM, PostgreSQL / SQLite
+- **Authentication**: NextAuth.js (JWT & Database Sessions)
+
+---
+
+## 🚀 Sida Loo Bilaabo (Getting Started)
+
+### 1. Web Application:
 ```bash
+# Ku shub dependencies-ka
+npm install
+
+# Diyaari database-ka
+npx prisma generate
+npx prisma db push
+
+# Daaran Server-ka
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Fur browser-kaaga: `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2. Mobile Application:
+```bash
+cd mobile
+npm install
+npx expo start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 Xuquuqda (License)
+© 2026 **Garab**. All rights reserved.

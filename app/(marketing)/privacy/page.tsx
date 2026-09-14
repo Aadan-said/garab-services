@@ -38,7 +38,7 @@ export default function PrivacyPage() {
                                 1. Xogta aan uruurino
                             </h2>
                             <div className="prose prose-slate dark:prose-invert max-w-none text-muted-foreground leading-relaxed space-y-4">
-                                <p>Markaad isu diiwaangelinayso SomaliServices, waxaan uruurinnaa macluumaadka soo socda:</p>
+                                <p>Markaad isu diiwaangelinayso Garab, waxaan uruurinnaa macluumaadka soo socda:</p>
                                 <ul className="list-disc pl-6 space-y-2">
                                     <li>Magacaaga oo buuxa iyo sawirka profile-ka.</li>
                                     <li>Email-ka iyo lambarka taleefanka.</li>
@@ -76,7 +76,7 @@ export default function PrivacyPage() {
                                 3. Siyaasadda Cookies-ka
                             </h2>
                             <div className="prose prose-slate dark:prose-invert max-w-none text-muted-foreground leading-relaxed space-y-4">
-                                <p>SomaliServices waxay isticmaashaa cookies si ay u wanaajiso khibradaada. Cookies-ku waxay naga caawiyaan:</p>
+                                <p>Garab waxay isticmaashaa cookies si ay u wanaajiso khibradaada. Cookies-ku waxay naga caawiyaan:</p>
                                 <ul className="list-disc pl-6 space-y-2">
                                     <li>Inaan ku aqoonsanno markaad dib ugu soo laabato madasheena.</li>
                                     <li>Inaan fahanno sida dadku u isticmaalaan adeegayaga si aan u sii qurxinno.</li>

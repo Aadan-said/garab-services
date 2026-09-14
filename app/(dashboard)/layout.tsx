@@ -48,8 +48,8 @@ function DashboardContent({ children }: { children: React.ReactNode }) {
                     <div className="p-1.5 bg-gradient-to-br from-primary to-blue-600 rounded-lg shadow-lg">
                         <ShieldCheck className="h-4 w-4 text-white" />
                     </div>
-                    <span className="font-black text-foreground text-lg tracking-tight">
-                        Somali<span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Services</span>
+                    <span className="font-black text-foreground text-lg tracking-tight bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+                        Garab
                     </span>
                     <div className="ml-auto flex items-center gap-2">
                         <div className="h-8 w-8 rounded-xl bg-muted border border-border flex items-center justify-center overflow-hidden">

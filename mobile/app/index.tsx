@@ -17,8 +17,7 @@ export default function Index() {
                 />
                 <View style={styles.content}>
                     <ActivityIndicator size="large" color="#5c6bf0" />
-                    <Text style={styles.appTitle}>SOMALI LOCAL</Text>
-                    <Text style={styles.appTitle}>SERVICES</Text>
+                    <Text style={styles.appTitle}>GARAB</Text>
                     <Text style={styles.tagline}>Xal deg deg ah...</Text>
                 </View>
             </View>

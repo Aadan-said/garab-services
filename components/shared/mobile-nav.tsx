@@ -50,7 +50,7 @@ export function MobileNav({ isClient }: MobileNavProps) {
             {/* Mobile Header */}
             <div className="fixed top-0 left-0 right-0 h-16 bg-background/80 backdrop-blur-xl border-b border-border flex items-center justify-between px-4 z-50">
                 <Link href="/" className="font-black text-xl bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent tracking-tight">
-                    Somali<span className="text-foreground">Services</span>
+                    Garab
                 </Link>
                 <div className="flex items-center gap-2">
                     <ThemeToggle />

@@ -28,7 +28,7 @@ export function Navbar() {
                         <Sparkles className="h-5 w-5 text-white" />
                     </div>
                     <span className="text-xl font-bold bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent">
-                        SomaliServices
+                        Garab
                     </span>
                 </Link>
 

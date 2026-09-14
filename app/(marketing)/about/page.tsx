@@ -28,11 +28,11 @@ export default function AboutPage() {
                         <span>Sheekadayada iyo Hadafkayaga</span>
                     </div>
                     <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight mb-8">
-                        S.L.S Madasha <br />
+                        Garab: Madasha <br />
                         <span className="bg-gradient-to-r from-primary via-blue-600 to-indigo-600 bg-clip-text text-transparent italic">Mustaqbalka</span> Somalia.
                     </h1>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                        SomaliServices waa madasha ugu weyn ee dalka ee isku xirta xirfadlayaasha tayada leh iyo qoysaska raadinaya adeegyo la aamini karo.
+                        Garab waa madasha ugu weyn ee dalka ee isku xirta xirfadlayaasha tayada leh iyo qoysaska raadinaya adeegyo la aamini karo.
                     </p>
                 </div>
             </section>
@@ -47,7 +47,7 @@ export default function AboutPage() {
                                 Waxaan bilownay annagoo leh hal ujeedo: Inaan fududayno helitaanka adeegyo tayo leh gudaha Somalia. Waxaan aragnay baahida loo qabo madal hufan oo isku xirta xirfadlayaasha iyo macaamiisha.
                             </p>
                             <p className="text-lg text-muted-foreground leading-relaxed">
-                                Maanta, SomaliServices waa madal ay kumanaan qof ku kalsoon yihiin si ay u helaan shaqooyin, kor ugu qaadaan ganacsigooda, oo ay u helaan adeegyo hufan.
+                                Maanta, Garab waa madal ay kumanaan qof ku kalsoon yihiin si ay u helaan shaqooyin, kor ugu qaadaan ganacsigooda, oo ay u helaan adeegyo hufan.
                             </p>
                             <div className="grid grid-cols-2 gap-8 pt-8 border-t border-border/50">
                                 <div>
@@ -129,7 +129,7 @@ export default function AboutPage() {
                                 </div>
                                 <div className="space-y-4 flex-1">
                                     <div className="text-xs font-bold text-primary uppercase tracking-widest bg-primary/5 inline-block px-3 py-1 rounded-full">Jan 2026</div>
-                                    <h3 className="text-2xl font-bold group-hover:text-primary transition-colors leading-tight">SomaliServices oo gaartay 5,000 oo xirfadlayaal ah.</h3>
+                                    <h3 className="text-2xl font-bold group-hover:text-primary transition-colors leading-tight">Garab oo gaaray 5,000 oo xirfadlayaal ah.</h3>
                                     <p className="text-base text-muted-foreground leading-relaxed">Maanta waxaan gaarnay guul weyn oo muujinaysa kobaca madashayada iyo kalsoonida bulshada...</p>
                                 </div>
                             </div>
@@ -146,7 +146,7 @@ export default function AboutPage() {
                         <div className="max-w-3xl mx-auto space-y-8 relative z-10">
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium">
                                 <Users2 className="h-4 w-4" />
-                                Bulshada SomaliServices
+                                Bulshada Garab
                             </div>
                             <h2 className="text-4xl md:text-5xl font-black">Nagu Soo Biir Maanta</h2>
                             <p className="text-xl text-white/80">

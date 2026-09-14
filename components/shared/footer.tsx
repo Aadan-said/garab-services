@@ -32,7 +32,7 @@ export function Footer() {
                                 <Sparkles className="h-7 w-7 text-white" />
                             </div>
                             <span className="text-2xl font-black tracking-tighter bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent">
-                                SomaliServices
+                                Garab
                             </span>
                         </Link>
 
@@ -160,7 +160,7 @@ export function Footer() {
 
                     <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
                         <div className="space-y-2 text-center lg:text-left">
-                            <h3 className="text-2xl font-bold tracking-tight">Stay ahead with SomaliServices</h3>
+                            <h3 className="text-2xl font-bold tracking-tight">Stay ahead with Garab</h3>
                             <p className="text-muted-foreground max-w-md">
                                 Get monthly tips on home maintenance and exclusive provider discounts.
                             </p>
@@ -188,7 +188,7 @@ export function Footer() {
                     </div>
 
                     <p className="text-sm text-muted-foreground text-center md:text-left">
-                        © 2025 Somali Local Services. Madal lagu dhisay tayo iyo xirfad.
+                        © 2026 Garab. Madal lagu dhisay tayo iyo xirfad.
                     </p>
 
                     <div className="flex items-center gap-6">

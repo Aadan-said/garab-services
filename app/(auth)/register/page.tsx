@@ -244,7 +244,7 @@ export default function RegisterPage() {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 mb-3 ring-4 ring-primary/5">
                     <UserPlus className="h-7 w-7 text-primary" />
                 </div>
-                <h1 className="text-2xl font-black tracking-tight text-gray-900 dark:text-white">Nagu soo Biir Somali Services</h1>
+                <h1 className="text-2xl font-black tracking-tight text-gray-900 dark:text-white">Nagu soo Biir Garab</h1>
                 <p className="text-sm text-gray-400 font-medium tracking-tight">Sameyso akoon cusub si aad u bilowdo</p>
             </div>
 

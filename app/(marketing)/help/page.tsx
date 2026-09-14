@@ -133,7 +133,7 @@ export default function HelpPage() {
                                     Nala Soo Hadal
                                 </Button>
                             </Link>
-                            <a href="mailto:support@somaliservices.so">
+                            <a href="mailto:support@garab.so">
                                 <Button size="lg" variant="outline" className="h-14 px-10 rounded-2xl border-2 text-lg font-bold hover:bg-muted/50 transition-all">
                                     Email noo soo dir
                                 </Button>

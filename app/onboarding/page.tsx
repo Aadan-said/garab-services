@@ -57,7 +57,7 @@ export default function OnboardingPage() {
                         </div>
                     </div>
                     <CardTitle className="text-3xl font-black tracking-tight text-gray-900">
-                        Welcome to Somali<span className="text-purple-600">Services</span>!
+                        Welcome to <span className="text-purple-600">Garab</span>!
                     </CardTitle>
                     <CardDescription className="text-base font-medium text-gray-500 mt-2">
                         {isProvider

@@ -180,7 +180,7 @@ export default function ProfileScreen() {
 
                 <View style={styles.footer}>
                     <Text style={styles.versionText}>Version 2.0.1 (Elite)</Text>
-                    <Text style={styles.copyrightText}>© 2026 Somali Local Services</Text>
+                    <Text style={styles.copyrightText}>© 2026 Garab</Text>
                 </View>
 
                 <View style={{ height: 100 }} />

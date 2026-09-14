@@ -58,10 +58,10 @@ export function DashboardSidebar() {
                     {!isCollapsed && (
                         <div className="flex flex-col">
                             <span className="text-lg font-bold tracking-tight bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent">
-                                Somali
+                                Garab
                             </span>
                             <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest -mt-1">
-                                Services
+                                Platform
                             </span>
                         </div>
                     )}

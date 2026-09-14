@@ -11,7 +11,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Somali Local Services",
+  title: "Garab - Local Services Platform",
   description: "Find trusted local services and experts in Somalia.",
 };
 

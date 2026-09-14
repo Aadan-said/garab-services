@@ -108,8 +108,7 @@ export default function RegisterScreen() {
                     {/* Top Section: Logo & Branding */}
                     <View style={styles.topSection}>
                         <View style={styles.headerGlow} />
-                        <Text style={styles.appTitlePrimary}>SOMALI LOCAL</Text>
-                        <Text style={styles.appTitleSecondary}>SERVICES</Text>
+                        <Text style={styles.appTitleSecondary}>GARAB</Text>
                         <View style={styles.taglineWrapper}>
                             <View style={styles.taglineLine} />
                             <Text style={styles.tagline}>YOUR TRUSTED PARTNER</Text>
