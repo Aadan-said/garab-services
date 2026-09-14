@@ -73,16 +73,16 @@ export default function LandingPage() {
 
                             {/* Main Glass Showcase Container */}
                             <div className="relative rounded-3xl md:rounded-[2.5rem] bg-card/60 dark:bg-card/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.4)] overflow-hidden">
-                                
+
                                 {/* Top Trust Highlights Bar */}
                                 <div className="px-6 py-3.5 bg-gradient-to-r from-primary/10 via-blue-500/10 to-primary/10 border-b border-border/40 flex flex-wrap items-center justify-between gap-3 text-xs font-semibold text-muted-foreground">
                                     <div className="flex items-center gap-2 text-foreground">
                                         <ShieldCheck className="h-4 w-4 text-emerald-500" />
-                                        <span>100% Xaqiijin & Dammaanad Tayo leh</span>
+                                        <span>100% La xaqiijiaya & Dammaanad Tayo leh</span>
                                     </div>
                                     <div className="hidden sm:flex items-center gap-2">
                                         <Clock className="h-4 w-4 text-primary" />
-                                        <span>Celcelis Jawaab-celin: <strong className="text-foreground">15 Daqiiqo</strong></span>
+                                        <span>Celcelis Jawaab-celin: <strong className="text-foreground">5 Daqiiqo</strong></span>
                                     </div>
                                     <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-bold">
                                         <span className="relative flex h-2 w-2">
@@ -146,7 +146,7 @@ export default function LandingPage() {
                                         <p className="text-sm font-bold text-foreground mt-1">Shaqooyin Guuleystay</p>
                                         <p className="text-xs text-muted-foreground mt-1">Si nabad ah lagu dhamaystiray</p>
                                         <div className="mt-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[11px] font-bold">
-                                            <span>99.4% Dhamaystir Sare</span>
+                                            <span>99.4% La dhamaystiray</span>
                                         </div>
                                     </div>
 

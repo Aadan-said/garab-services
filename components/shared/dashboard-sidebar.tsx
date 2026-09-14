@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { LayoutDashboard, ShoppingBag, DollarSign, Settings, User, LogOut, Sparkles, ShieldCheck, ArrowRight, MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import { LayoutDashboard, ShoppingBag, DollarSign, Settings, User, LogOut, ShieldCheck, ArrowRight, MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { NotificationCenter } from "./notification-center";
 import { useSidebar } from "@/hooks/use-sidebar-state";
 import { ThemeToggle } from "./theme-toggle";
@@ -52,8 +52,8 @@ export function DashboardSidebar() {
             {/* Header with Brand Logo */}
             <div className="flex h-16 items-center px-6 border-b border-border justify-between">
                 <Link href="/" className={cn("flex items-center gap-2.5 font-bold transition-opacity hover:opacity-80 group", isCollapsed && "justify-center w-full")}>
-                    <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-blue-600 transition-transform group-hover:scale-110 shrink-0">
-                        <Sparkles className="h-4 w-4 text-white" />
+                    <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-white dark:bg-card border border-primary/20 shadow-md transition-transform group-hover:scale-110 shrink-0 overflow-hidden p-1">
+                        <img src="/logo.png" alt="Garab" className="h-full w-full object-contain" />
                     </div>
                     {!isCollapsed && (
                         <div className="flex flex-col">

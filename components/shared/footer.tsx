@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {
-    Sparkles,
     Twitter,
     Facebook,
     Instagram,
@@ -28,8 +27,8 @@ export function Footer() {
                     {/* Brand Section */}
                     <div className="lg:col-span-4 space-y-8">
                         <Link href="/" className="flex items-center space-x-3 group">
-                            <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-primary via-blue-600 to-indigo-600 shadow-xl group-hover:scale-110 transition-transform">
-                                <Sparkles className="h-7 w-7 text-white" />
+                            <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-white dark:bg-card border border-primary/20 shadow-xl group-hover:scale-110 transition-transform overflow-hidden p-2">
+                                <img src="/logo.png" alt="Garab" className="h-full w-full object-contain" />
                             </div>
                             <span className="text-2xl font-black tracking-tighter bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent">
                                 Garab

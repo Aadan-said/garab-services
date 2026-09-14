@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { ThemeToggle } from "./theme-toggle";
@@ -24,8 +24,8 @@ export function Navbar() {
             <div className="container flex h-16 items-center justify-between px-4 md:px-6">
                 {/* Logo */}
                 <Link href="/" className="flex items-center space-x-2 group">
-                    <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-blue-600 group-hover:scale-110 transition-transform">
-                        <Sparkles className="h-5 w-5 text-white" />
+                    <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-white dark:bg-card border border-primary/20 shadow-md group-hover:scale-110 transition-transform overflow-hidden p-1">
+                        <img src="/logo.png" alt="Garab" className="h-full w-full object-contain" />
                     </div>
                     <span className="text-xl font-bold bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent">
                         Garab
