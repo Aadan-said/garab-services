@@ -6,7 +6,7 @@ export default function LandingPage() {
     return (
         <div className="flex flex-col min-h-screen selection:bg-primary/20">
             {/* Hero Section */}
-            <section className="relative pt-4 pb-10 md:pt-6 md:pb-14 lg:pt-8 lg:pb-16 overflow-hidden">
+            <section className="relative pt-8 pb-12 md:pt-12 md:pb-16 lg:pt-14 lg:pb-20 overflow-hidden">
                 {/* Animated Gradient Background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10 -z-10" />
 
@@ -15,7 +15,7 @@ export default function LandingPage() {
                 <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[600px] h-[600px] bg-blue-400/5 rounded-full blur-3xl opacity-60" />
 
                 <div className="container px-4 md:px-6 relative z-10">
-                    <div className="flex flex-col items-center space-y-4 md:space-y-5 text-center max-w-4xl mx-auto">
+                    <div className="flex flex-col items-center space-y-6 md:space-y-7 text-center max-w-4xl mx-auto">
                         {/* Premium Badge */}
                         <div className="animate-fade-in-up">
                             <div className="inline-flex items-center gap-2 rounded-full bg-card/90 dark:bg-card/60 backdrop-blur-md px-4 py-1.5 text-xs font-bold text-primary shadow-lg shadow-primary/5 border border-primary/20 transition-transform hover:scale-105">
@@ -27,26 +27,26 @@ export default function LandingPage() {
                             </div>
                         </div>
 
-                        {/* Main Heading - Reduced Size & Refined */}
-                        <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.12]">
-                            <span className="block mb-1 text-foreground/90">Adeegyo xirfadaysan oo</span>
-                            <span className="bg-gradient-to-r from-primary via-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1 inline-block">
+                        {/* Main Heading */}
+                        <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.18]">
+                            <span className="block mb-2 text-foreground/90">Adeegyo xirfadaysan oo</span>
+                            <span className="bg-gradient-to-r from-primary via-blue-600 to-indigo-600 bg-clip-text text-transparent pb-2 inline-block">
                                 laguugu keenayo albaabkaaga
                             </span>
                         </h1>
 
                         {/* Description */}
-                        <p className="mx-auto max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed font-medium">
+                        <p className="mx-auto max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed font-normal">
                             Lakulan Macmiil ama Xirfadle kugu haboon Garab waa haqabtiraha bulshadeena somaliyeed sidii ay ku heli lahayd
                             baranamij Digital aha lagu kalsoon yahay Dalbo isla markiiba si ammaan ah.
                         </p>
 
                         {/* CTA Buttons - Premium Styling */}
-                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto pt-1">
+                        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-3">
                             <Link href="/register">
                                 <Button
                                     size="lg"
-                                    className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-bold h-12 md:h-14 px-8 rounded-2xl shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300 group text-base"
+                                    className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 rounded-2xl shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300 group text-base"
                                 >
                                     Book a Service
                                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -56,7 +56,7 @@ export default function LandingPage() {
                                 <Button
                                     variant="outline"
                                     size="lg"
-                                    className="w-full sm:w-auto h-12 md:h-14 px-8 rounded-2xl border-2 border-border bg-background/80 backdrop-blur-md text-foreground font-bold hover:bg-muted transition-all duration-300 text-base"
+                                    className="w-full sm:w-auto h-14 px-8 rounded-2xl border-2 border-border bg-background/80 backdrop-blur-md text-foreground font-bold hover:bg-muted transition-all duration-300 text-base"
                                 >
                                     <Search className="mr-2 h-4 w-4 text-primary" />
                                     Find Providers
@@ -66,7 +66,7 @@ export default function LandingPage() {
 
 
                         {/* Stats - Premium Glass Design */}
-                        <div className="w-full max-w-5xl mx-auto mt-8 md:mt-12 relative">
+                        <div className="w-full max-w-5xl mx-auto mt-12 md:mt-16 relative">
                             {/* Background Glow Decorations */}
                             <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-full h-64 bg-primary/5 blur-[120px] -z-10" />
 
