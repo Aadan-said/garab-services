@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Search, Zap, CheckCircle, Star, Shield, Sparkles, Users, TrendingUp } from "lucide-react";
+import { ArrowRight, Search, Zap, CheckCircle, Star, Shield, Sparkles, Users, TrendingUp, ShieldCheck, Clock, BadgeCheck, Lock } from "lucide-react";
 
 export default function LandingPage() {
     return (
@@ -65,63 +65,122 @@ export default function LandingPage() {
                         </div>
 
 
-                        {/* Stats - Premium Glass Design */}
-                        <div className="w-full max-w-5xl mx-auto mt-12 md:mt-16 relative">
-                            {/* Background Glow Decorations */}
-                            <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-full h-64 bg-primary/5 blur-[120px] -z-10" />
+                        {/* High-Converting Social Proof & Trust Showcase */}
+                        <div className="w-full max-w-6xl mx-auto mt-12 md:mt-16 relative">
+                            {/* Ambient Glows */}
+                            <div className="absolute -top-16 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-[100px] pointer-events-none -z-10 animate-pulse" />
+                            <div className="absolute -bottom-10 right-1/4 w-72 h-72 bg-blue-500/20 rounded-full blur-[100px] pointer-events-none -z-10" />
 
-                            {/* Main Container */}
-                            <div className="relative rounded-[2.5rem] bg-card/40 backdrop-blur-2xl border border-white/10 dark:border-white/5 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] overflow-hidden">
-                                {/* Decorative Shine Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-white/5 pointer-events-none" />
+                            {/* Main Glass Showcase Container */}
+                            <div className="relative rounded-3xl md:rounded-[2.5rem] bg-card/60 dark:bg-card/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.4)] overflow-hidden">
+                                
+                                {/* Top Trust Highlights Bar */}
+                                <div className="px-6 py-3.5 bg-gradient-to-r from-primary/10 via-blue-500/10 to-primary/10 border-b border-border/40 flex flex-wrap items-center justify-between gap-3 text-xs font-semibold text-muted-foreground">
+                                    <div className="flex items-center gap-2 text-foreground">
+                                        <ShieldCheck className="h-4 w-4 text-emerald-500" />
+                                        <span>100% Xaqiijin & Dammaanad Tayo leh</span>
+                                    </div>
+                                    <div className="hidden sm:flex items-center gap-2">
+                                        <Clock className="h-4 w-4 text-primary" />
+                                        <span>Celcelis Jawaab-celin: <strong className="text-foreground">15 Daqiiqo</strong></span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-bold">
+                                        <span className="relative flex h-2 w-2">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                                        </span>
+                                        <span>Adeegyo Diyaar ah 24/7</span>
+                                    </div>
+                                </div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border/20 relative z-10">
-                                    {/* Stat 1: Xirfadlayaal */}
-                                    <div className="group relative p-8 md:p-10 flex flex-col items-center text-center transition-all duration-500 hover:bg-primary/5">
-                                        <div className="mb-6 relative flex items-center justify-center">
-                                            <div className="absolute inset-0 bg-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                                            <div className="relative flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10">
-                                                <Users className="h-8 w-8 text-white" />
+                                {/* 4-Pillar Grid */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-border/30 relative z-10">
+                                    {/* Stat 1: Happy Clients */}
+                                    <div className="group p-6 md:p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-primary/5">
+                                        <div className="mb-4 relative">
+                                            <div className="absolute inset-0 bg-blue-500/20 rounded-2xl blur-lg group-hover:blur-xl transition-all" />
+                                            <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-lg group-hover:scale-110 transition-transform">
+                                                <Users className="h-7 w-7" />
                                             </div>
                                         </div>
-                                        <div className="space-y-2">
-                                            <div className="text-5xl font-black tracking-tighter bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent group-hover:from-blue-600 group-hover:to-indigo-600 transition-all duration-500">
-                                                500+
-                                            </div>
-                                            <div className="text-xs font-black text-muted-foreground uppercase tracking-[0.2em]">Xirfadlayaal</div>
+                                        <div className="text-3xl md:text-4xl font-black tracking-tight text-foreground group-hover:text-primary transition-colors">
+                                            5,000+
+                                        </div>
+                                        <p className="text-sm font-bold text-foreground mt-1">Macaamiil Faraxsan</p>
+                                        <p className="text-xs text-muted-foreground mt-1">Qoysas ku kalsoonaaday Garab</p>
+                                        <div className="mt-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-[11px] font-bold">
+                                            <span>🇸🇴 Guud ahaan dalka</span>
                                         </div>
                                     </div>
 
-                                    {/* Stat 2: Shaqooyin */}
-                                    <div className="group relative p-8 md:p-10 flex flex-col items-center text-center transition-all duration-500 hover:bg-primary/5">
-                                        <div className="mb-6 relative flex items-center justify-center">
-                                            <div className="absolute inset-0 bg-emerald-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                                            <div className="relative flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 text-white shadow-xl group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 z-10">
-                                                <CheckCircle className="h-8 w-8 text-white" />
+                                    {/* Stat 2: Verified Pros */}
+                                    <div className="group p-6 md:p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-primary/5">
+                                        <div className="mb-4 relative">
+                                            <div className="absolute inset-0 bg-emerald-500/20 rounded-2xl blur-lg group-hover:blur-xl transition-all" />
+                                            <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg group-hover:scale-110 transition-transform">
+                                                <BadgeCheck className="h-7 w-7" />
                                             </div>
                                         </div>
-                                        <div className="space-y-2">
-                                            <div className="text-5xl font-black tracking-tighter bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent group-hover:from-emerald-500 group-hover:to-teal-600 transition-all duration-500">
-                                                10K+
-                                            </div>
-                                            <div className="text-xs font-black text-muted-foreground uppercase tracking-[0.2em]">Shaqooyin</div>
+                                        <div className="text-3xl md:text-4xl font-black tracking-tight text-foreground group-hover:text-emerald-500 transition-colors">
+                                            1,200+
+                                        </div>
+                                        <p className="text-sm font-bold text-foreground mt-1">Xirfadlayaal La Hubiyay</p>
+                                        <p className="text-xs text-muted-foreground mt-1">Koronto, Tubo, Farsamo & Dhisid</p>
+                                        <div className="mt-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[11px] font-bold">
+                                            <ShieldCheck className="h-3 w-3" />
+                                            <span>ID & Background Checked</span>
                                         </div>
                                     </div>
 
-                                    {/* Stat 3: Qiimaynta */}
-                                    <div className="group relative p-8 md:p-10 flex flex-col items-center text-center transition-all duration-500 hover:bg-primary/5">
-                                        <div className="mb-6 relative flex items-center justify-center">
-                                            <div className="absolute inset-0 bg-amber-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-                                            <div className="relative flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10">
-                                                <Star className="h-8 w-8 text-white fill-current" />
+                                    {/* Stat 3: Completed Jobs */}
+                                    <div className="group p-6 md:p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-primary/5">
+                                        <div className="mb-4 relative">
+                                            <div className="absolute inset-0 bg-purple-500/20 rounded-2xl blur-lg group-hover:blur-xl transition-all" />
+                                            <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white shadow-lg group-hover:scale-110 transition-transform">
+                                                <TrendingUp className="h-7 w-7" />
                                             </div>
                                         </div>
-                                        <div className="space-y-2">
-                                            <div className="text-5xl font-black tracking-tighter bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent group-hover:from-amber-500 group-hover:to-orange-500 transition-all duration-500">
-                                                4.9/5
-                                            </div>
-                                            <div className="text-xs font-black text-muted-foreground uppercase tracking-[0.2em]">Qiimaynta</div>
+                                        <div className="text-3xl md:text-4xl font-black tracking-tight text-foreground group-hover:text-purple-500 transition-colors">
+                                            25,000+
                                         </div>
+                                        <p className="text-sm font-bold text-foreground mt-1">Shaqooyin Guuleystay</p>
+                                        <p className="text-xs text-muted-foreground mt-1">Si nabad ah lagu dhamaystiray</p>
+                                        <div className="mt-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[11px] font-bold">
+                                            <span>99.4% Dhamaystir Sare</span>
+                                        </div>
+                                    </div>
+
+                                    {/* Stat 4: Rating & Reviews */}
+                                    <div className="group p-6 md:p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-primary/5">
+                                        <div className="mb-4 relative">
+                                            <div className="absolute inset-0 bg-amber-500/20 rounded-2xl blur-lg group-hover:blur-xl transition-all" />
+                                            <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-lg group-hover:scale-110 transition-transform">
+                                                <Star className="h-7 w-7 fill-current" />
+                                            </div>
+                                        </div>
+                                        <div className="text-3xl md:text-4xl font-black tracking-tight text-foreground group-hover:text-amber-500 transition-colors">
+                                            4.9 / 5.0
+                                        </div>
+                                        <p className="text-sm font-bold text-foreground mt-1">Qiimaynta Macaamiisha</p>
+                                        <p className="text-xs text-muted-foreground mt-1">In ka badan 8,400+ Faallo</p>
+                                        <div className="mt-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-[11px] font-bold">
+                                            <span>★★★★★ Sareeyo</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Bottom Payment Trust Strip */}
+                                <div className="px-6 py-4 bg-muted/40 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+                                    <div className="flex items-center gap-2">
+                                        <Lock className="h-4 w-4 text-emerald-500" />
+                                        <span className="font-semibold text-foreground">Lacag Bixin Ammaan ah (Escrow):</span>
+                                        <span>Lacagtaadu waa mid la hayo ilaa aad ka qanacdo shaqada.</span>
+                                    </div>
+                                    <div className="flex items-center gap-2 font-bold text-foreground/80">
+                                        <span className="text-[10px] uppercase tracking-wider text-muted-foreground">Hababka:</span>
+                                        <span className="px-2 py-0.5 rounded-md bg-background border border-border shadow-xs">EVC Plus</span>
+                                        <span className="px-2 py-0.5 rounded-md bg-background border border-border shadow-xs">Sahal</span>
+                                        <span className="px-2 py-0.5 rounded-md bg-background border border-border shadow-xs">Premier</span>
                                     </div>
                                 </div>
                             </div>
