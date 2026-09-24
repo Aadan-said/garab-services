@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -92,9 +93,22 @@ function RegisterForm() {
                 throw new Error(data.error || "Something went wrong");
             }
 
-            // Redirect with phone number for auto-filling
-            router.push(`/login?phone=${encodeURIComponent(phone)}`);
-            // window.location.href = "/login"; // Removed to use router for smoother transition
+            // Toos u gal (Auto-login) adigoon qofka dib ugu celin login page
+            const loginRes = await signIn("credentials", {
+                identifier: normalizedPhone,
+                password,
+                redirect: false,
+            });
+
+            if (loginRes?.error) {
+                // Haddii cilad auto-login timaado, xilligaas keliya login u dir
+                router.push(`/login?phone=${encodeURIComponent(phone)}`);
+            } else {
+                // Toos ugu gudbi dashboard-ka iyadoo la refresh-gareynayo session-ka
+                router.refresh();
+                const destination = role === "client" ? "/client" : "/provider";
+                window.location.href = destination;
+            }
         } catch (err: any) {
             setError(err.message);
         } finally {

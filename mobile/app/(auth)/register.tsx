@@ -69,9 +69,14 @@ export default function RegisterScreen() {
                 finalPhone = '+252 ' + finalPhone.replace(/^0+/, ''); // Remove leading zeros
             }
 
-            await register(name, email, password, role.toUpperCase(), finalPhone);
-            // Explicitly navigate to root to trigger redirection logic in index.tsx
-            router.replace('/');
+            await register(name, email, password, role === 'client' ? 'CLIENT' : 'PROVIDER', finalPhone);
+            
+            // Toos ugu gudbi barnaamijka (Home) adigoon qofka ku celin qaybta login-ka
+            if (role === 'provider') {
+                router.replace('/(provider)/home');
+            } else {
+                router.replace('/(client)/home');
+            }
         } catch (error: any) {
             console.error('DEBUG_REGISTER_ERROR:', error);
             let errorMessage = 'Is-diiwaangelintu way khaldantay ';
