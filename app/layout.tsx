@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+    google: "rlfUfa7tKm6dw_5V2vHcPJWXqkUjrKUTm5I4",
   },
 };
 
@@ -97,6 +97,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="google-site-verification" content="rlfUfa7tKm6dw_5V2vHcPJWXqkUjrKUTm5I4" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
