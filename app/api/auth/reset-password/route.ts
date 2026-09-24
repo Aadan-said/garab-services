@@ -24,7 +24,7 @@ export async function POST(req: Request) {
         const hashedPassword = await bcrypt.hash(password, 10);
 
         await prisma.user.update({
-            where: { email: resetToken.email },
+            where: { phone: resetToken.phone },
             data: { password: hashedPassword },
         });
 
@@ -33,7 +33,7 @@ export async function POST(req: Request) {
             where: { token },
         });
 
-        logger.info(`Password reset successful for ${resetToken.email}`);
+        logger.info(`Password reset successful for ${resetToken.phone}`);
 
         return NextResponse.json({ message: "Password has been reset successfully" });
     } catch (error) {

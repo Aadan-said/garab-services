@@ -307,7 +307,7 @@ export default function WalletScreen() {
                 </View>
             </Modal>
 
-            {/* LACAG BIXI MODAL (Garab) */}
+            {/* LACAG BIXI MODAL (Farsamo Yaqan) */}
             <Modal
                 visible={showPayModal}
                 transparent={true}

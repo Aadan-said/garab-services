@@ -1,6 +1,6 @@
-# 🌟 Garab - Madasha Adeegyada Maxaliga ah (Local Services Platform)
+# 🌟 Farsamo Yaqan - Madasha Adeegyada Maxaliga ah (Local Services Platform)
 
-**Garab** waa madal casri ah oo isku xirta macaamiisha iyo xirfadlayaasha maxaliga ah ee ku nool Soomaaliya. Waxay u saamaxaysaa qoysaska iyo shakhsiyaadka inay si fudud, degdeg ah, oo ammaan ah ku helaan adeegyo tayo sare leh (sida korontada, tubooyinka, nadaafadda, dhismaha, iyo farsamooyin kale).
+**Farsamo Yaqan** waa madal casri ah oo isku xirta macaamiisha iyo xirfadlayaasha maxaliga ah ee ku nool Soomaaliya. Waxay u saamaxaysaa qoysaska iyo shakhsiyaadka inay si fudud, degdeg ah, oo ammaan ah ku helaan adeegyo tayo sare leh (sida korontada, tubooyinka, nadaafadda, dhismaha, iyo farsamooyin kale).
 
 ---
 
@@ -33,4 +33,4 @@ Mashruucaan waxa uu ka kooban yahay laba qaybood oo waaweyn:
 ---
 
 ## 📄 Xuquuqda (License)
-© 2026 **Garab**. All rights reserved.
+© 2026 **Farsamo Yaqan**. All rights reserved.

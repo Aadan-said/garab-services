@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Garab",
+    "name": "Farsamo Yaqan",
     "slug": "garab",
     "scheme": "garab",
     "version": "1.0.0",
@@ -47,7 +47,7 @@
       "icon": "./assets/icon.png",
       "color": "#5c6bf0",
       "androidMode": "default",
-      "androidCollapsedTitle": "Garab"
+      "androidCollapsedTitle": "Farsamo Yaqan"
     }
   }
 }

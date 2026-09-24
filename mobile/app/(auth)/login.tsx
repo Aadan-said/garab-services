@@ -102,7 +102,7 @@ export default function LoginScreen() {
                     {/* Top Section: Logo & Branding */}
                     <View style={styles.topSection}>
                         <View style={styles.headerGlow} />
-                        <Text style={styles.appTitleSecondary}>GARAB</Text>
+                        <Text style={styles.appTitleSecondary}>FARSAMO YAQAN</Text>
                         <View style={styles.taglineWrapper}>
                             <View style={styles.taglineLine} />
                             <Text style={styles.tagline}>YOUR TRUSTED PARTNER</Text>
@@ -146,7 +146,7 @@ export default function LoginScreen() {
                             </View>
                             <TextInput
                                 style={styles.input}
-                                placeholder="name@example.com ama 61xxxxxxx"
+                                placeholder="Email or Number"
                                 placeholderTextColor="#94a3b8"
                                 value={identifier}
                                 onChangeText={setIdentifier}

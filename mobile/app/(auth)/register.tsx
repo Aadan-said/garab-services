@@ -108,7 +108,7 @@ export default function RegisterScreen() {
                     {/* Top Section: Logo & Branding */}
                     <View style={styles.topSection}>
                         <View style={styles.headerGlow} />
-                        <Text style={styles.appTitleSecondary}>GARAB</Text>
+                        <Text style={styles.appTitleSecondary}>FARSAMO YAQAN</Text>
                         <View style={styles.taglineWrapper}>
                             <View style={styles.taglineLine} />
                             <Text style={styles.tagline}>YOUR TRUSTED PARTNER</Text>

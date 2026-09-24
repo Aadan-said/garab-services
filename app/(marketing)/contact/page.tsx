@@ -49,8 +49,8 @@ export default function ContactPage() {
         {
             icon: Mail,
             label: "Email noo soo dir",
-            value: "support@garab.so",
-            href: "mailto:support@garab.so"
+            value: "support@farsamoyaqan.com",
+            href: "mailto:support@farsamoyaqan.com"
         },
         {
             icon: Phone,

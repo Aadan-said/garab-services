@@ -1,8 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { ClientSessionProvider } from "@/components/providers/session-provider";
 import { Toaster } from "sonner";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -11,8 +17,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Garab - Local Services Platform",
-  description: "Find trusted local services and experts in Somalia.",
+  title: "Farsamo Yaqan - Local Services Platform",
+  description: "Xirfadlayaal iyo adeegyo maxali ah oo la aamini karo - Farsamo Yaqan.",
 };
 
 import { ErrorBoundary } from "@/components/error-boundary";

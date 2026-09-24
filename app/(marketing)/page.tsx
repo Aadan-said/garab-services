@@ -14,7 +14,7 @@ export default function LandingPage() {
                 <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl opacity-60" />
                 <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[600px] h-[600px] bg-blue-400/5 rounded-full blur-3xl opacity-60" />
 
-                <div className="container px-4 md:px-6 relative z-10">
+                <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="flex flex-col items-center space-y-6 md:space-y-7 text-center max-w-4xl mx-auto">
                         {/* Premium Badge */}
                         <div className="animate-fade-in-up">
@@ -37,7 +37,7 @@ export default function LandingPage() {
 
                         {/* Description */}
                         <p className="mx-auto max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed font-normal">
-                            Lakulan Macmiil ama Xirfadle kugu haboon Garab waa haqabtiraha bulshadeena somaliyeed sidii ay ku heli lahayd
+                            Lakulan Macmiil ama Xirfadle kugu haboon. Farsamo Yaqan waa haqabtiraha bulshadeena somaliyeed sidii ay ku heli lahayd
                             baranamij Digital aha lagu kalsoon yahay Dalbo isla markiiba si ammaan ah.
                         </p>
 
@@ -107,7 +107,7 @@ export default function LandingPage() {
                                             5,000+
                                         </div>
                                         <p className="text-sm font-bold text-foreground mt-1">Macaamiil Faraxsan</p>
-                                        <p className="text-xs text-muted-foreground mt-1">Qoysas ku kalsoonaaday Garab</p>
+                                        <p className="text-xs text-muted-foreground mt-1">Qoysas ku kalsoonaaday Farsamo Yaqan</p>
                                         <div className="mt-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-[11px] font-bold">
                                             <span>🇸🇴 Guud ahaan dalka</span>
                                         </div>
@@ -193,8 +193,8 @@ export default function LandingPage() {
             </section>
 
             {/* Services Grid */}
-            <section className="relative py-16 md:py-24 overflow-hidden">
-                <div className="container px-4 md:px-6 relative">
+            <section className="relative py-16 md:py-24 overflow-hidden w-full">
+                <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                     <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                         <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary border border-primary/20 backdrop-blur-sm">
                             <Zap className="h-3.5 w-3.5" />
@@ -279,14 +279,14 @@ export default function LandingPage() {
             </section>
 
             {/* How it Works */}
-            <section className="relative pt-12 md:pt-16 pb-24 md:pb-32 bg-background overflow-hidden">
+            <section className="relative pt-12 md:pt-16 pb-24 md:pb-32 bg-background overflow-hidden w-full">
                 {/* Background Text Decor */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-primary/5 select-none -z-10 tracking-tighter uppercase whitespace-nowrap">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-primary/5 select-none -z-10 tracking-tighter uppercase whitespace-nowrap pointer-events-none">
                     Process
                 </div>
 
-                <div className="container px-4 md:px-6">
-                    <div className="flex flex-col items-center text-center mb-20 space-y-4">
+                <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col items-center text-center mb-16 md:mb-20 space-y-4">
                         <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary border border-primary/20 backdrop-blur-sm">
                             <ArrowRight className="h-3.5 w-3.5" />
                             <span>Fudud oo Degdeg ah</span>
@@ -300,7 +300,7 @@ export default function LandingPage() {
                         </p>
                     </div>
 
-                    <div className="grid gap-12 lg:grid-cols-3 xl:gap-16 relative">
+                    <div className="grid gap-8 lg:gap-10 lg:grid-cols-3 xl:gap-12 relative">
                         {/* Connecting Line (Desktop) */}
                         <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-border to-transparent -translate-y-1/2 -z-10" />
 
@@ -332,32 +332,32 @@ export default function LandingPage() {
                         ].map((step, i) => (
                             <div key={i} className="group relative">
                                 {/* Step Card */}
-                                <div className="h-full flex flex-col p-12 lg:p-14 rounded-[3rem] border border-border/50 bg-card/60 backdrop-blur-xl transition-all duration-500 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-4">
+                                <div className="h-full flex flex-col p-8 sm:p-10 lg:p-12 rounded-3xl md:rounded-[3rem] border border-border/50 bg-card/60 backdrop-blur-xl transition-all duration-500 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 sm:hover:-translate-y-4">
                                     {/* Large Floating Number */}
-                                    <div className="absolute -top-8 -right-8 text-8xl lg:text-9xl font-black text-primary/10 group-hover:text-primary/20 transition-colors italic">
+                                    <div className="absolute -top-6 -right-6 sm:-top-8 sm:-right-8 text-7xl sm:text-8xl lg:text-9xl font-black text-primary/10 group-hover:text-primary/20 transition-colors italic pointer-events-none">
                                         {step.number}
                                     </div>
 
                                     {/* Icon Box */}
-                                    <div className="relative mb-10 w-24 h-24 flex items-center justify-center">
+                                    <div className="relative mb-8 sm:mb-10 w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
                                         <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity`} />
-                                        <div className={`relative flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br ${step.gradient} text-white shadow-2xl shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10`}>
-                                            <step.icon className="h-10 w-10 text-white" />
+                                        <div className={`relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br ${step.gradient} text-white shadow-2xl shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10`}>
+                                            <step.icon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
                                         </div>
                                     </div>
 
                                     {/* Text Content */}
-                                    <div className="space-y-6">
-                                        <h3 className="text-3xl font-bold tracking-tight">
+                                    <div className="space-y-4 sm:space-y-6">
+                                        <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
                                             {step.title}
                                         </h3>
-                                        <p className="text-muted-foreground text-lg leading-relaxed">
+                                        <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
                                             {step.description}
                                         </p>
                                     </div>
 
                                     {/* Bottom Indicator */}
-                                    <div className="mt-auto pt-10 flex items-center gap-4">
+                                    <div className="mt-auto pt-8 sm:pt-10 flex items-center gap-4">
                                         <div className={`h-2 w-16 rounded-full bg-gradient-to-r ${step.gradient} opacity-30 group-hover:opacity-100 transition-all duration-500 group-hover:w-24`} />
                                         <div className="h-2 w-2 rounded-full bg-muted-foreground/30 animate-pulse" />
                                     </div>
@@ -367,27 +367,27 @@ export default function LandingPage() {
                     </div>
 
                     {/* Trust Banner */}
-                    <div className="mt-24 p-1 rounded-4xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-emerald-500/10">
-                        <div className="glass border-white/20 rounded-[2.4rem] p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-10">
-                            <div className="flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
-                                <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/10 text-primary">
-                                    <Shield className="h-10 w-10" />
+                    <div className="mt-16 md:mt-24 p-1 rounded-3xl md:rounded-4xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-emerald-500/10">
+                        <div className="glass border-white/20 rounded-[1.8rem] md:rounded-[2.4rem] p-6 sm:p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
+                            <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 text-center md:text-left">
+                                <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-primary/10 text-primary shrink-0">
+                                    <Shield className="h-8 w-8 sm:h-10 sm:w-10" />
                                 </div>
                                 <div className="space-y-2">
-                                    <h4 className="text-2xl font-bold tracking-tight">Amnigaagu waa mudnaan tayada 1 aad.</h4>
-                                    <p className="text-muted-foreground max-w-md">
+                                    <h4 className="text-xl sm:text-2xl font-bold tracking-tight">Amnigaagu waa mudnaan tayada 1 aad.</h4>
+                                    <p className="text-muted-foreground text-sm sm:text-base max-w-md">
                                         Adeeg-bixiye kasta oo ku jira mada sheena wuxuu maraa baaritaan iyo hubin dhammeystiran.
                                     </p>
                                 </div>
                             </div>
-                            <div className="flex flex-wrap justify-center gap-4">
-                                <div className="px-6 py-3 rounded-2xl bg-primary/5 border border-primary/10 flex items-center gap-3">
-                                    <CheckCircle className="h-5 w-5 text-primary" />
-                                    <span className="font-semibold text-sm">Aqoonsiyo La Hubiyay</span>
+                            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                                <div className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-2xl bg-primary/5 border border-primary/10 flex items-center gap-2.5 sm:gap-3">
+                                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                                    <span className="font-semibold text-xs sm:text-sm">Aqoonsiyo La Hubiyay</span>
                                 </div>
-                                <div className="px-6 py-3 rounded-2xl bg-blue-500/5 border border-blue-500/10 flex items-center gap-3">
-                                    <Star className="h-5 w-5 text-blue-500" />
-                                    <span className="font-semibold text-sm">Top Rated Only</span>
+                                <div className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-2xl bg-blue-500/5 border border-blue-500/10 flex items-center gap-2.5 sm:gap-3">
+                                    <Star className="h-4 w-4 sm:h-5 sm:w-5 text-blue-500" />
+                                    <span className="font-semibold text-xs sm:text-sm">Top Rated Only</span>
                                 </div>
                             </div>
                         </div>

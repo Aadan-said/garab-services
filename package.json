@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
+    "dev:all": "concurrently --kill-others-on-fail -n BACKEND,MOBILE -c cyan,magenta \"next dev -H 0.0.0.0\" \"npm --prefix mobile run start\"",
     "build": "prisma generate && prisma db push --accept-data-loss --skip-generate && next build",
     "start": "next start -H 0.0.0.0",
     "mobile": "npm --prefix mobile run start",

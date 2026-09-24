@@ -21,17 +21,17 @@ export function Footer() {
             {/* Top Glow Decoration */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
-            <div className="container px-4 md:px-6 pt-20 pb-12">
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-20 pb-12">
                 {/* Main Grid */}
                 <div className="grid gap-12 lg:grid-cols-12 mb-20">
                     {/* Brand Section */}
                     <div className="lg:col-span-4 space-y-8">
                         <Link href="/" className="flex items-center space-x-3 group">
                             <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-white dark:bg-card border border-primary/20 shadow-xl group-hover:scale-110 transition-transform overflow-hidden p-2">
-                                <img src="/logo.png" alt="Garab" className="h-full w-full object-contain" />
+                                <img src="/logo.png" alt="Farsamo Yaqan" className="h-full w-full object-contain" />
                             </div>
                             <span className="text-2xl font-black tracking-tighter bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent">
-                                Garab
+                                Farsamo Yaqan
                             </span>
                         </Link>
 
@@ -159,7 +159,7 @@ export function Footer() {
 
                     <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
                         <div className="space-y-2 text-center lg:text-left">
-                            <h3 className="text-2xl font-bold tracking-tight">Stay ahead with Garab</h3>
+                            <h3 className="text-2xl font-bold tracking-tight">Stay ahead with Farsamo Yaqan</h3>
                             <p className="text-muted-foreground max-w-md">
                                 Get monthly tips on home maintenance and exclusive provider discounts.
                             </p>
@@ -187,7 +187,7 @@ export function Footer() {
                     </div>
 
                     <p className="text-sm text-muted-foreground text-center md:text-left">
-                        © 2026 Garab. Madal lagu dhisay tayo iyo xirfad.
+                        © 2026 Farsamo Yaqan. Madal lagu dhisay tayo iyo xirfad.
                     </p>
 
                     <div className="flex items-center gap-6">

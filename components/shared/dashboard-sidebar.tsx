@@ -53,12 +53,12 @@ export function DashboardSidebar() {
             <div className="flex h-16 items-center px-6 border-b border-border justify-between">
                 <Link href="/" className={cn("flex items-center gap-2.5 font-bold transition-opacity hover:opacity-80 group", isCollapsed && "justify-center w-full")}>
                     <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-white dark:bg-card border border-primary/20 shadow-md transition-transform group-hover:scale-110 shrink-0 overflow-hidden p-1">
-                        <img src="/logo.png" alt="Garab" className="h-full w-full object-contain" />
+                        <img src="/logo.png" alt="Farsamo Yaqan" className="h-full w-full object-contain" />
                     </div>
                     {!isCollapsed && (
                         <div className="flex flex-col">
                             <span className="text-lg font-bold tracking-tight bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent">
-                                Garab
+                                Farsamo Yaqan
                             </span>
                             <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest -mt-1">
                                 Platform
