@@ -1,394 +1,331 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Search, Zap, CheckCircle, Star, Shield, Sparkles, Users, TrendingUp, ShieldCheck, Clock, BadgeCheck, Lock } from "lucide-react";
+import { 
+    ArrowRight, 
+    Zap, 
+    Droplet, 
+    Sparkles, 
+    Snowflake, 
+    ShieldCheck, 
+    BadgeCheck, 
+    Star, 
+    Lock, 
+    CheckCircle 
+} from "lucide-react";
 
 export default function LandingPage() {
     return (
-        <div className="flex flex-col min-h-screen selection:bg-primary/20">
-            {/* Hero Section */}
-            <section className="relative pt-8 pb-12 md:pt-12 md:pb-16 lg:pt-14 lg:pb-20 overflow-hidden">
-                {/* Animated Gradient Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10 -z-10" />
+        <div className="flex flex-col min-h-screen bg-white dark:bg-background text-foreground">
+            {/* HERO SECTION */}
+            <section className="relative pt-10 pb-12 md:pt-16 md:pb-16 lg:pt-20 lg:pb-20 overflow-hidden">
+                <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                        {/* Left Column: Headlines & CTAs */}
+                        <div className="lg:col-span-7 flex flex-col items-start text-left">
+                            {/* Pill Badge */}
+                            <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 border border-amber-500/20 px-3.5 py-1 text-xs font-semibold text-amber-800 dark:text-amber-300 mb-6">
+                                <span className="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse" />
+                                <span>Waxaa na aaminey in ka badan 5,000 qoys oo Soomaali ah</span>
+                            </div>
 
-                {/* Refined Floating Element - Right Side */}
-                <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl opacity-60" />
-                <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[600px] h-[600px] bg-blue-400/5 rounded-full blur-3xl opacity-60" />
+                            {/* Main Title */}
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.12]">
+                                Adeegyo xirfad leh<br />
+                                oo albaabkaaga<br />
+                                laguugu keenayo.
+                            </h1>
 
-                <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="flex flex-col items-center space-y-6 md:space-y-7 text-center max-w-4xl mx-auto">
-                        {/* Premium Badge */}
-                        <div className="animate-fade-in-up">
-                            <div className="inline-flex items-center gap-2 rounded-full bg-card/90 dark:bg-card/60 backdrop-blur-md px-4 py-1.5 text-xs font-bold text-primary shadow-lg shadow-primary/5 border border-primary/20 transition-transform hover:scale-105">
-                                <span className="relative flex h-2 w-2">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                                </span>
-                                <span>Waxaa Na'aaminay In kabadan 5,000+ Qoysas Somaliyeed</span>
+                            {/* Subtitle */}
+                            <p className="mt-5 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
+                                Farsamo Yaqaan waa madasha bulshadeena ee kuu fududeynaysa inaad xirfadle ama macmiil kugu habboon hesho, adigoo dalbanaya isla markiiba si ammaan ah.
+                            </p>
+
+                            {/* CTAs */}
+                            <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4 w-full sm:w-auto">
+                                <Link href="/register">
+                                    <Button className="h-12 px-7 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-sm flex items-center gap-2 transition-all">
+                                        Dalbo adeeg
+                                        <ArrowRight className="h-4 w-4" />
+                                    </Button>
+                                </Link>
+                                <Link href="/providers">
+                                    <Button 
+                                        variant="outline" 
+                                        className="h-12 px-7 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-card text-slate-700 dark:text-slate-200 font-bold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
+                                    >
+                                        Raadi xirfadlayaal
+                                    </Button>
+                                </Link>
+                            </div>
+
+                            {/* Micro Trust Indicators */}
+                            <div className="mt-10 pt-6 border-t border-slate-200/80 dark:border-slate-800 flex flex-wrap items-center gap-6 text-xs text-slate-500 dark:text-slate-400">
+                                <div className="flex items-center gap-1.5">
+                                    <CheckCircle className="h-3.5 w-3.5 text-emerald-500" />
+                                    <span className="font-medium">100% la xaqiijiyey</span>
+                                </div>
+                                <div className="flex items-center gap-1.5">
+                                    <Zap className="h-3.5 w-3.5 text-amber-500 fill-amber-500" />
+                                    <span className="font-medium">Jawaab celin: 5 daqiiqo</span>
+                                </div>
+                                <div className="flex items-center gap-1.5">
+                                    <span className="h-2 w-2 rounded-full bg-blue-500" />
+                                    <span className="font-medium">Waa furan yahay 24/7</span>
+                                </div>
                             </div>
                         </div>
 
-                        {/* Main Heading */}
-                        <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.18]">
-                            <span className="block mb-2 text-foreground/90">Adeegyo xirfadaysan oo</span>
-                            <span className="bg-gradient-to-r from-primary via-blue-600 to-indigo-600 bg-clip-text text-transparent pb-2 inline-block">
-                                laguugu keenayo albaabkaaga
-                            </span>
-                        </h1>
-
-                        {/* Description */}
-                        <p className="mx-auto max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed font-normal">
-                            Lakulan Macmiil ama Xirfadle kugu haboon. Farsamo Yaqan waa haqabtiraha bulshadeena somaliyeed sidii ay ku heli lahayd
-                            baranamij Digital aha lagu kalsoon yahay Dalbo isla markiiba si ammaan ah.
-                        </p>
-
-                        {/* CTA Buttons - Premium Styling */}
-                        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-3">
-                            <Link href="/register">
-                                <Button
-                                    size="lg"
-                                    className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 rounded-2xl shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300 group text-base"
-                                >
-                                    Book a Service
-                                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                                </Button>
-                            </Link>
-                            <Link href="/services">
-                                <Button
-                                    variant="outline"
-                                    size="lg"
-                                    className="w-full sm:w-auto h-14 px-8 rounded-2xl border-2 border-border bg-background/80 backdrop-blur-md text-foreground font-bold hover:bg-muted transition-all duration-300 text-base"
-                                >
-                                    <Search className="mr-2 h-4 w-4 text-primary" />
-                                    Find Providers
-                                </Button>
-                            </Link>
-                        </div>
-
-
-                        {/* High-Converting Social Proof & Trust Showcase */}
-                        <div className="w-full max-w-6xl mx-auto mt-12 md:mt-16 relative">
-                            {/* Ambient Glows */}
-                            <div className="absolute -top-16 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-[100px] pointer-events-none -z-10 animate-pulse" />
-                            <div className="absolute -bottom-10 right-1/4 w-72 h-72 bg-blue-500/20 rounded-full blur-[100px] pointer-events-none -z-10" />
-
-                            {/* Main Glass Showcase Container */}
-                            <div className="relative rounded-3xl md:rounded-[2.5rem] bg-card/60 dark:bg-card/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.4)] overflow-hidden">
-
-                                {/* Top Trust Highlights Bar */}
-                                <div className="px-6 py-3.5 bg-gradient-to-r from-primary/10 via-blue-500/10 to-primary/10 border-b border-border/40 flex flex-wrap items-center justify-between gap-3 text-xs font-semibold text-muted-foreground">
-                                    <div className="flex items-center gap-2 text-foreground">
-                                        <ShieldCheck className="h-4 w-4 text-emerald-500" />
-                                        <span>100% La xaqiijiaya & Dammaanad Tayo leh</span>
+                        {/* Right Column: Clean Visual Showcase Card */}
+                        <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                            <div className="w-full max-w-md relative rounded-[2.5rem] bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 p-6 sm:p-8 shadow-2xl shadow-amber-500/20">
+                                {/* Top Rating Pill */}
+                                <div className="flex justify-start mb-4">
+                                    <div className="inline-flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full shadow-md text-xs font-bold text-slate-900">
+                                        <div className="flex text-amber-400">
+                                            {[...Array(5)].map((_, i) => (
+                                                <Star key={i} className="h-3 w-3 fill-current" />
+                                            ))}
+                                        </div>
+                                        <span>4.9</span>
                                     </div>
-                                    <div className="hidden sm:flex items-center gap-2">
-                                        <Clock className="h-4 w-4 text-primary" />
-                                        <span>Celcelis Jawaab-celin: <strong className="text-foreground">5 Daqiiqo</strong></span>
-                                    </div>
-                                    <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-bold">
-                                        <span className="relative flex h-2 w-2">
-                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                                </div>
+
+                                {/* Floating White Card */}
+                                <div className="bg-white rounded-2xl p-5 sm:p-6 shadow-xl text-slate-900 border border-slate-100">
+                                    <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                                        <span className="text-[10px] font-bold tracking-wider text-slate-400 uppercase">CODSIGA GUUD</span>
+                                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-blue-50 text-blue-600">
+                                            La aqbalay
                                         </span>
-                                        <span>Adeegyo Diyaar ah 24/7</span>
                                     </div>
-                                </div>
 
-                                {/* 4-Pillar Grid */}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-border/30 relative z-10">
-                                    {/* Stat 1: Happy Clients */}
-                                    <div className="group p-6 md:p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-primary/5">
-                                        <div className="mb-4 relative">
-                                            <div className="absolute inset-0 bg-blue-500/20 rounded-2xl blur-lg group-hover:blur-xl transition-all" />
-                                            <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-lg group-hover:scale-110 transition-transform">
-                                                <Users className="h-7 w-7" />
-                                            </div>
+                                    <h3 className="mt-3.5 text-base sm:text-lg font-bold text-slate-900">
+                                        Tuubo dillaacay, jikada
+                                    </h3>
+
+                                    {/* Provider Box */}
+                                    <div className="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center gap-3">
+                                        <div className="w-10 h-10 rounded-full bg-slate-900 text-white font-black text-xs flex items-center justify-center shrink-0">
+                                            XL
                                         </div>
-                                        <div className="text-3xl md:text-4xl font-black tracking-tight text-foreground group-hover:text-primary transition-colors">
-                                            5,000+
-                                        </div>
-                                        <p className="text-sm font-bold text-foreground mt-1">Macaamiil Faraxsan</p>
-                                        <p className="text-xs text-muted-foreground mt-1">Qoysas ku kalsoonaaday Farsamo Yaqan</p>
-                                        <div className="mt-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-[11px] font-bold">
-                                            <span>🇸🇴 Guud ahaan dalka</span>
+                                        <div className="min-w-0">
+                                            <p className="text-xs font-bold text-slate-900 flex items-center gap-1">
+                                                Xirfadle la hubiyey
+                                                <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                                            </p>
+                                            <p className="text-[11px] text-slate-500">Tuubayste · ID la xaqiijiyey</p>
                                         </div>
                                     </div>
 
-                                    {/* Stat 2: Verified Pros */}
-                                    <div className="group p-6 md:p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-primary/5">
-                                        <div className="mb-4 relative">
-                                            <div className="absolute inset-0 bg-emerald-500/20 rounded-2xl blur-lg group-hover:blur-xl transition-all" />
-                                            <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg group-hover:scale-110 transition-transform">
-                                                <BadgeCheck className="h-7 w-7" />
-                                            </div>
+                                    {/* Progress Timeline */}
+                                    <div className="mt-5 pt-2">
+                                        <div className="relative flex items-center justify-between">
+                                            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-0.5 bg-slate-200" />
+                                            <div className="relative z-10 w-2.5 h-2.5 rounded-full bg-blue-600 ring-4 ring-white" />
+                                            <div className="relative z-10 w-2.5 h-2.5 rounded-full bg-blue-600 ring-4 ring-white" />
+                                            <div className="relative z-10 w-2.5 h-2.5 rounded-full bg-slate-300 ring-4 ring-white" />
                                         </div>
-                                        <div className="text-3xl md:text-4xl font-black tracking-tight text-foreground group-hover:text-emerald-500 transition-colors">
-                                            1,200+
-                                        </div>
-                                        <p className="text-sm font-bold text-foreground mt-1">Xirfadlayaal La Hubiyay</p>
-                                        <p className="text-xs text-muted-foreground mt-1">Koronto, Tubo, Farsamo & Dhisid</p>
-                                        <div className="mt-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[11px] font-bold">
-                                            <ShieldCheck className="h-3 w-3" />
-                                            <span>ID & Background Checked</span>
-                                        </div>
-                                    </div>
-
-                                    {/* Stat 3: Completed Jobs */}
-                                    <div className="group p-6 md:p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-primary/5">
-                                        <div className="mb-4 relative">
-                                            <div className="absolute inset-0 bg-purple-500/20 rounded-2xl blur-lg group-hover:blur-xl transition-all" />
-                                            <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white shadow-lg group-hover:scale-110 transition-transform">
-                                                <TrendingUp className="h-7 w-7" />
-                                            </div>
-                                        </div>
-                                        <div className="text-3xl md:text-4xl font-black tracking-tight text-foreground group-hover:text-purple-500 transition-colors">
-                                            25,000+
-                                        </div>
-                                        <p className="text-sm font-bold text-foreground mt-1">Shaqooyin Guuleystay</p>
-                                        <p className="text-xs text-muted-foreground mt-1">Si nabad ah lagu dhamaystiray</p>
-                                        <div className="mt-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 text-[11px] font-bold">
-                                            <span>99.4% La dhamaystiray</span>
-                                        </div>
-                                    </div>
-
-                                    {/* Stat 4: Rating & Reviews */}
-                                    <div className="group p-6 md:p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-primary/5">
-                                        <div className="mb-4 relative">
-                                            <div className="absolute inset-0 bg-amber-500/20 rounded-2xl blur-lg group-hover:blur-xl transition-all" />
-                                            <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-lg group-hover:scale-110 transition-transform">
-                                                <Star className="h-7 w-7 fill-current" />
-                                            </div>
-                                        </div>
-                                        <div className="text-3xl md:text-4xl font-black tracking-tight text-foreground group-hover:text-amber-500 transition-colors">
-                                            4.9 / 5.0
-                                        </div>
-                                        <p className="text-sm font-bold text-foreground mt-1">Qiimaynta Macaamiisha</p>
-                                        <p className="text-xs text-muted-foreground mt-1">In ka badan 8,400+ Faallo</p>
-                                        <div className="mt-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-[11px] font-bold">
-                                            <span>★★★★★ Sareeyo</span>
+                                        <div className="flex justify-between text-[10px] font-semibold text-slate-500 mt-2">
+                                            <span className="text-blue-600 font-bold">Geddi</span>
+                                            <span className="text-blue-600 font-bold">Imaanshaha</span>
+                                            <span>Dhamaad</span>
                                         </div>
                                     </div>
                                 </div>
 
-                                {/* Bottom Payment Trust Strip */}
-                                <div className="px-6 py-4 bg-muted/40 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-                                    <div className="flex items-center gap-2">
-                                        <Lock className="h-4 w-4 text-emerald-500" />
-                                        <span className="font-semibold text-foreground">Lacag Bixin Ammaan ah (Escrow):</span>
-                                        <span>Lacagtaadu waa mid la hayo ilaa aad ka qanacdo shaqada.</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 font-bold text-foreground/80">
-                                        <span className="text-[10px] uppercase tracking-wider text-muted-foreground">Hababka:</span>
-                                        <span className="px-2 py-0.5 rounded-md bg-background border border-border shadow-xs">EVC Plus</span>
-                                        <span className="px-2 py-0.5 rounded-md bg-background border border-border shadow-xs">Sahal</span>
-                                        <span className="px-2 py-0.5 rounded-md bg-background border border-border shadow-xs">Premier</span>
+                                {/* Floating Escrow Lock Pill */}
+                                <div className="mt-4 flex justify-end">
+                                    <div className="inline-flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-full text-xs font-semibold shadow-lg">
+                                        <Lock className="h-3.5 w-3.5 text-amber-400" />
+                                        <span>Lacagtaada waa la hayaa</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {/* Bottom Wave - Seamless Transition */}
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
             </section>
 
-            {/* Services Grid */}
-            <section className="relative py-16 md:py-24 overflow-hidden w-full">
-                <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                    <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                        <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary border border-primary/20 backdrop-blur-sm">
-                            <Zap className="h-3.5 w-3.5" />
-                            <span>Hadda La Heli Karo</span>
+            {/* ESCROW & PAYMENT GUARANTEE BANNER */}
+            <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 md:mb-20">
+                <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/40 p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                    <div className="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                        <div className="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                            <ShieldCheck className="h-4 w-4" />
                         </div>
-                        <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
-                            Adeegyada <span className="text-primary italic">Ugu Caansan</span>
+                        <div>
+                            <span className="font-bold text-slate-900 dark:text-white mr-1.5">Lacag bixin ammaan ah (Escrow):</span>
+                            <span className="text-slate-600 dark:text-slate-400">Lacagtaadu waa la hayaa ilaa aad ka qanacdo shaqada.</span>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0">
+                        <span className="px-2.5 py-1 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-[11px] text-slate-700 dark:text-slate-200 shadow-xs">EVC Plus</span>
+                        <span className="px-2.5 py-1 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-[11px] text-slate-700 dark:text-slate-200 shadow-xs">Sahal</span>
+                        <span className="px-2.5 py-1 rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-[11px] text-slate-700 dark:text-slate-200 shadow-xs">Premier</span>
+                    </div>
+                </div>
+            </section>
+
+            {/* POPULAR SERVICES SECTION */}
+            <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-10 gap-4">
+                    <div>
+                        <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+                            HADDA LA HELI KARO
+                        </span>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-1">
+                            Adeegyada ugu caansan
                         </h2>
-                        <p className="max-w-[700px] text-muted-foreground text-lg leading-relaxed">
+                        <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 mt-2">
                             Wax kasta oo aad u baahan tahay si gurigaaga ama xafiiskaaga loo dayactiro.
                         </p>
                     </div>
+                    <Link 
+                        href="/services" 
+                        className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors shrink-0"
+                    >
+                        <span>Eeg dhammaan adeegyada</span>
+                        <ArrowRight className="h-4 w-4" />
+                    </Link>
+                </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[
-                            {
-                                icon: Zap,
-                                label: "Korantayste",
-                                description: "Khabiir ku ah fiilooyinka & dayactirka.",
-                                gradient: "from-amber-400 to-orange-500",
-                                shadowColor: "shadow-orange-500/20",
-                                bgLight: "bg-amber-500/5",
-                                borderColor: "border-amber-500/20"
-                            },
-                            {
-                                icon: CheckCircle,
-                                label: "Tuubayste",
-                                description: "Hagaajinta dillaacyada & tuubooyinka.",
-                                gradient: "from-blue-400 to-indigo-600",
-                                shadowColor: "shadow-blue-500/20",
-                                bgLight: "bg-blue-500/5",
-                                borderColor: "border-blue-500/20"
-                            },
-                            {
-                                icon: Star,
-                                label: "Nadiifiye",
-                                description: "Nadaafad dhamaystiran oo guryaha ah.",
-                                gradient: "from-emerald-400 to-teal-600",
-                                shadowColor: "shadow-emerald-500/20",
-                                bgLight: "bg-emerald-500/5",
-                                borderColor: "border-emerald-500/20"
-                            },
-                            {
-                                icon: Shield,
-                                label: "Qaboojiye (AC)",
-                                description: "Dayactir iyo adeeg qaboojiyaasha.",
-                                gradient: "from-rose-400 to-pink-600",
-                                shadowColor: "shadow-rose-500/20",
-                                bgLight: "bg-rose-500/5",
-                                borderColor: "border-rose-500/20"
-                            },
-                        ].map((service, i) => (
-                            <Link key={i} href="/register" className="group relative block h-full">
-                                <div className={`relative h-full overflow-hidden rounded-3xl border ${service.borderColor} bg-card p-6 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group-hover:border-primary/50`}>
-                                    <div className={`absolute top-0 right-0 h-24 w-24 translate-x-8 -translate-y-8 rounded-full bg-gradient-to-br ${service.gradient} opacity-10 group-hover:opacity-20 transition-opacity`} />
-
-                                    <div className={`mb-6 relative h-16 w-16 flex items-center justify-center rounded-2xl bg-gradient-to-br ${service.gradient} text-white shadow-lg overflow-hidden`}>
-                                        <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                        <service.icon className="h-8 w-8 relative z-10" />
-                                    </div>
-
-                                    <h3 className="mb-2 text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                                        {service.label}
-                                    </h3>
-                                    <p className="text-sm text-muted-foreground leading-relaxed">
-                                        {service.description}
-                                    </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    {[
+                        {
+                            title: "Korontaystaha",
+                            description: "Khabiir ku ah fiilooyinka iyo dayactirka korontada.",
+                            icon: Zap,
+                            iconBg: "bg-blue-50 text-blue-600 dark:bg-blue-950/50 dark:text-blue-400",
+                        },
+                        {
+                            title: "Tuubaystaha",
+                            description: "Hagaajinta dillaacyada iyo tuubooyinka.",
+                            icon: Droplet,
+                            iconBg: "bg-amber-50 text-amber-600 dark:bg-amber-950/50 dark:text-amber-400",
+                        },
+                        {
+                            title: "Nadiifiyaha",
+                            description: "Nadaafad dhamaystiran oo guryaha ah.",
+                            icon: Sparkles,
+                            iconBg: "bg-purple-50 text-purple-600 dark:bg-purple-950/50 dark:text-purple-400",
+                        },
+                        {
+                            title: "Qaboojiyaha (AC)",
+                            description: "Dayactir iyo adeeg qaboojiyayaasha.",
+                            icon: Snowflake,
+                            iconBg: "bg-teal-50 text-teal-600 dark:bg-teal-950/50 dark:text-teal-400",
+                        },
+                    ].map((service, index) => {
+                        const IconComponent = service.icon;
+                        return (
+                            <Link 
+                                key={index} 
+                                href="/services" 
+                                className="bg-white dark:bg-card border border-slate-200/90 dark:border-slate-800 rounded-2xl p-6 hover:shadow-lg hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-200 group flex flex-col"
+                            >
+                                <div className={`w-11 h-11 rounded-xl ${service.iconBg} flex items-center justify-center mb-5 group-hover:scale-105 transition-transform`}>
+                                    <IconComponent className="h-5 w-5" />
                                 </div>
+                                <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                    {service.title}
+                                </h3>
+                                <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+                                    {service.description}
+                                </p>
                             </Link>
-                        ))}
-                    </div>
-
-                    <div className="mt-12 text-center">
-                        <Link href="/services">
-                            <Button variant="outline" size="lg" className="rounded-full px-8 border-primary/20 hover:bg-primary/5 text-primary font-semibold hover:border-primary/50 transition-all">
-                                Eeg Dhamaan Adeegyada
-                                <ArrowRight className="ml-2 h-4 w-4" />
-                            </Button>
-                        </Link>
-                    </div>
+                        );
+                    })}
                 </div>
             </section>
 
-            {/* How it Works */}
-            <section className="relative pt-12 md:pt-16 pb-24 md:pb-32 bg-background overflow-hidden w-full">
-                {/* Background Text Decor */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-primary/5 select-none -z-10 tracking-tighter uppercase whitespace-nowrap pointer-events-none">
-                    Process
+            {/* HOW IT WORKS SECTION */}
+            <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+                <div>
+                    <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+                        FUDUD OO DEGDEG AH
+                    </span>
+                    <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-1">
+                        Sidee ayaan u shaqaynaa
+                    </h2>
+                    <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 mt-2 max-w-2xl leading-relaxed">
+                        Hore uma fududeyn in macmiil iyo xirfadle is helaan. Barnaamijkan wuxuu kuu sahlayaa, adigoo raacaya saddex tallaabo oo kooban.
+                    </p>
                 </div>
 
-                <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col items-center text-center mb-16 md:mb-20 space-y-4">
-                        <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary border border-primary/20 backdrop-blur-sm">
-                            <ArrowRight className="h-3.5 w-3.5" />
-                            <span>Fudud oo Degdeg ah</span>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+                    {[
+                        {
+                            step: "01",
+                            title: "Soo dir codsi shaqo",
+                            description: "Sharax waxa aad rabto in lagu qabto, ku dar sawirro iyo goobta aad joogto. Waxay qaadataa wax ka yar 2 daqiiqo.",
+                        },
+                        {
+                            step: "02",
+                            title: "Hel xirfadle kugu habboon",
+                            description: "Adeeg-bixiyeyaasha deegaankaaga ayaa arka codsigaaga, waxaana lagu ogeysiinayaa marka uu mid aqbalo.",
+                        },
+                        {
+                            step: "03",
+                            title: "Shaqadu way dhamaataa",
+                            description: "Xirfadlaha ayaa kuu imanaya oo shaqada qabanaya. Waxaad bixisaa lacagta si ammaan ah madasha dhexdeeda.",
+                        },
+                    ].map((item, index) => (
+                        <div 
+                            key={index} 
+                            className="bg-white dark:bg-card border border-slate-200/90 dark:border-slate-800 rounded-2xl p-7 shadow-xs flex flex-col"
+                        >
+                            <div className="w-10 h-10 rounded-full bg-slate-900 text-white font-extrabold text-xs flex items-center justify-center">
+                                {item.step}
+                            </div>
+                            <h3 className="text-lg font-bold text-slate-900 dark:text-white mt-5">
+                                {item.title}
+                            </h3>
+                            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                                {item.description}
+                            </p>
                         </div>
-                        <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-                            Sidee ayaan <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent italic">Ushaqaynaa</span>
-                        </h2>
-                        <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                            Markii hore ma fududayn inay is helaan macmiil iyo xirafadlihii ku habonaa inuu shaqadaas qabto ,
-                            Barnaamij kaan wuxuu kuu sahalaya adigoo raacaya qorshaha aan u dajinay inaad heshid xirfadle kugu haboon ama macmiil.
-                        </p>
-                    </div>
+                    ))}
+                </div>
+            </section>
 
-                    <div className="grid gap-8 lg:gap-10 lg:grid-cols-3 xl:gap-12 relative">
-                        {/* Connecting Line (Desktop) */}
-                        <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-border to-transparent -translate-y-1/2 -z-10" />
-
-                        {[
-                            {
-                                number: "01",
-                                title: "Soo dir codsi shaqo ",
-                                description: "Sharax waxa aad rabto in laguu qabto, sawirro ku dar, goobata aad ku noo shahay. Waxay qaadaneysaa wax ka yar 2 daqiiqo.",
-                                icon: Search,
-                                gradient: "from-blue-500 to-indigo-600",
-                                shadow: "shadow-blue-500/20"
-                            },
-                            {
-                                number: "02",
-                                title: "Hell xirfadle kugu haboon",
-                                description: "Adeeg-bixiyeyaasha deegaankaaga ayaa arki doona codsigaaga. Waxaa lagu ogeysiinayaa marka uu mid aqbalo.",
-                                icon: Users,
-                                gradient: "from-purple-500 to-pink-600",
-                                shadow: "shadow-purple-500/20"
-                            },
-                            {
-                                number: "03",
-                                title: "Job Done",
-                                description: "Adeeg-bixiyuhu wuu kuu imaan doonaa ,shqadana kuu qabanyaa , and you pay securely through the platform. Success!",
-                                icon: Sparkles,
-                                gradient: "from-emerald-400 to-teal-600",
-                                shadow: "shadow-emerald-500/20"
-                            }
-                        ].map((step, i) => (
-                            <div key={i} className="group relative">
-                                {/* Step Card */}
-                                <div className="h-full flex flex-col p-8 sm:p-10 lg:p-12 rounded-3xl md:rounded-[3rem] border border-border/50 bg-card/60 backdrop-blur-xl transition-all duration-500 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 sm:hover:-translate-y-4">
-                                    {/* Large Floating Number */}
-                                    <div className="absolute -top-6 -right-6 sm:-top-8 sm:-right-8 text-7xl sm:text-8xl lg:text-9xl font-black text-primary/10 group-hover:text-primary/20 transition-colors italic pointer-events-none">
-                                        {step.number}
-                                    </div>
-
-                                    {/* Icon Box */}
-                                    <div className="relative mb-8 sm:mb-10 w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
-                                        <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity`} />
-                                        <div className={`relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br ${step.gradient} text-white shadow-2xl shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10`}>
-                                            <step.icon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
-                                        </div>
-                                    </div>
-
-                                    {/* Text Content */}
-                                    <div className="space-y-4 sm:space-y-6">
-                                        <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
-                                            {step.title}
-                                        </h3>
-                                        <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-                                            {step.description}
-                                        </p>
-                                    </div>
-
-                                    {/* Bottom Indicator */}
-                                    <div className="mt-auto pt-8 sm:pt-10 flex items-center gap-4">
-                                        <div className={`h-2 w-16 rounded-full bg-gradient-to-r ${step.gradient} opacity-30 group-hover:opacity-100 transition-all duration-500 group-hover:w-24`} />
-                                        <div className="h-2 w-2 rounded-full bg-muted-foreground/30 animate-pulse" />
-                                    </div>
-                                </div>
+            {/* TRUST & SECURITY SECTION */}
+            <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 mb-8">
+                <div className="rounded-3xl bg-slate-900 dark:bg-slate-950 text-white p-8 sm:p-12 lg:p-14 relative overflow-hidden shadow-2xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                        {/* Left Side */}
+                        <div className="lg:col-span-7 space-y-4">
+                            <div className="w-12 h-12 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                                <ShieldCheck className="h-6 w-6" />
                             </div>
-                        ))}
-                    </div>
+                            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
+                                Amnigaagu waa mudnaanta koowaad.
+                            </h3>
+                            <p className="text-slate-300 text-xs sm:text-sm max-w-lg leading-relaxed">
+                                Adeeg-bixiye kasta oo ku jira madasha wuxuu maraa baaritaan iyo hubin dhammeystiran.
+                            </p>
+                        </div>
 
-                    {/* Trust Banner */}
-                    <div className="mt-16 md:mt-24 p-1 rounded-3xl md:rounded-4xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-emerald-500/10">
-                        <div className="glass border-white/20 rounded-[1.8rem] md:rounded-[2.4rem] p-6 sm:p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
-                            <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 text-center md:text-left">
-                                <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-primary/10 text-primary shrink-0">
-                                    <Shield className="h-8 w-8 sm:h-10 sm:w-10" />
+                        {/* Right Side (3 Stacked Badges) */}
+                        <div className="lg:col-span-5 space-y-3">
+                            <div className="rounded-xl bg-slate-800/80 border border-slate-700/60 p-4 flex items-center gap-3.5">
+                                <div className="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                                    <BadgeCheck className="h-4 w-4" />
                                 </div>
-                                <div className="space-y-2">
-                                    <h4 className="text-xl sm:text-2xl font-bold tracking-tight">Amnigaagu waa mudnaan tayada 1 aad.</h4>
-                                    <p className="text-muted-foreground text-sm sm:text-base max-w-md">
-                                        Adeeg-bixiye kasta oo ku jira mada sheena wuxuu maraa baaritaan iyo hubin dhammeystiran.
-                                    </p>
-                                </div>
+                                <span className="font-semibold text-xs sm:text-sm">Aqoonsiyo la hubiyey</span>
                             </div>
-                            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-                                <div className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-2xl bg-primary/5 border border-primary/10 flex items-center gap-2.5 sm:gap-3">
-                                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
-                                    <span className="font-semibold text-xs sm:text-sm">Aqoonsiyo La Hubiyay</span>
+
+                            <div className="rounded-xl bg-slate-800/80 border border-slate-700/60 p-4 flex items-center gap-3.5">
+                                <div className="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                                    <Star className="h-4 w-4 fill-current" />
                                 </div>
-                                <div className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-2xl bg-blue-500/5 border border-blue-500/10 flex items-center gap-2.5 sm:gap-3">
-                                    <Star className="h-4 w-4 sm:h-5 sm:w-5 text-blue-500" />
-                                    <span className="font-semibold text-xs sm:text-sm">Top Rated Only</span>
+                                <span className="font-semibold text-xs sm:text-sm">Kuwa ugu qiimeysan oo kaliya</span>
+                            </div>
+
+                            <div className="rounded-xl bg-slate-800/80 border border-slate-700/60 p-4 flex items-center gap-3.5">
+                                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                                    <Lock className="h-4 w-4" />
                                 </div>
+                                <span className="font-semibold text-xs sm:text-sm">Lacag bixin Escrow</span>
                             </div>
                         </div>
                     </div>
@@ -397,4 +334,3 @@ export default function LandingPage() {
         </div>
     );
 }
-
