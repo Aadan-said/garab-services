@@ -75,20 +75,19 @@ export function Navbar() {
                 {/* Mobile / Tablet Controls (Visible below lg) */}
                 <div className="flex items-center space-x-2 lg:hidden">
                     <ThemeToggle />
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        className="hover:bg-primary/10 transition-colors"
+                    <button
+                        type="button"
+                        className="relative flex items-center justify-center w-9 h-9 rounded-xl border border-border/60 bg-background/80 hover:bg-muted text-foreground transition-all duration-200 shadow-xs active:scale-95 cursor-pointer"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         aria-label="Toggle navigation menu"
                     >
                         {mobileMenuOpen ? (
-                            <X className="h-5 w-5" />
+                            <X className="h-4 w-4" />
                         ) : (
-                            <Menu className="h-5 w-5" />
+                            <Menu className="h-4 w-4" />
                         )}
                         <span className="sr-only">Toggle menu</span>
-                    </Button>
+                    </button>
                 </div>
             </div>
 
