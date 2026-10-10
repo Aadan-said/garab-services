@@ -101,7 +101,7 @@ export default function AdminHome() {
                             >
                                 <TouchableOpacity style={styles.statCard}>
                                     <LinearGradient
-                                        colors={stat.gradient}
+                                        colors={stat.gradient as [string, string, ...string[]]}
                                         start={{ x: 0, y: 0 }}
                                         end={{ x: 1, y: 1 }}
                                         style={styles.statGradientIcon}
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
     heroGradient: {
-        ...StyleSheet.absoluteFillObject,
+        ...StyleSheet.absoluteFill,
         borderBottomLeftRadius: 40,
         borderBottomRightRadius: 40,
     },
@@ -296,7 +296,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderWidth: 1,
         borderColor: 'rgba(255,255,255,0.1)',
-        backdropFilter: 'blur(10px)', // For web, but keep for consistency in thought
     },
     statGradientIcon: {
         width: 32,

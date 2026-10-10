@@ -228,7 +228,7 @@ export default function ProviderHome() {
                     )}
                 </View>
 
-                <View style={{ height: 120 }} />
+                <View style={{ height: 20 }} />
             </ScrollView>
         </View>
     );

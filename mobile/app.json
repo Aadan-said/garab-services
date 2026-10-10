@@ -7,12 +7,6 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "ios": {
       "supportsTablet": true
     },
@@ -21,7 +15,6 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
@@ -33,6 +26,19 @@
       "expo-asset",
       "expo-font",
       [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 180,
+          "resizeMode": "contain",
+          "backgroundColor": "#0f172a",
+          "dark": {
+            "image": "./assets/splash-icon.png",
+            "backgroundColor": "#0f172a"
+          }
+        }
+      ],
+      [
         "expo-notifications",
         {
           "icon": "./assets/icon.png",
@@ -42,12 +48,6 @@
           ]
         }
       ]
-    ],
-    "notification": {
-      "icon": "./assets/icon.png",
-      "color": "#5c6bf0",
-      "androidMode": "default",
-      "androidCollapsedTitle": "Farsamo Yaqan"
-    }
+    ]
   }
 }

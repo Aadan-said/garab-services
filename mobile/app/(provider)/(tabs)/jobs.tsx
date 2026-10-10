@@ -7,6 +7,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { StatusBar } from 'expo-status-bar';
 
 const { width } = Dimensions.get('window');
+const isLargeScreen = width >= 600;
 
 export default function ProviderJobs() {
     const router = useRouter();
@@ -84,7 +85,7 @@ export default function ProviderJobs() {
             </View>
 
             <ScrollView
-                contentContainerStyle={styles.scrollContent}
+                contentContainerStyle={[styles.scrollContent, isLargeScreen && styles.scrollContentLarge]}
                 refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
                 showsVerticalScrollIndicator={false}
             >
@@ -93,7 +94,7 @@ export default function ProviderJobs() {
                         jobs.map((job) => (
                             <TouchableOpacity
                                 key={job.id}
-                                style={styles.jobCard}
+                                style={[styles.jobCard, isLargeScreen && styles.jobCardLarge]}
                                 onPress={() => router.push({ pathname: '/(provider)/job-details', params: { id: job.id } })}
                                 activeOpacity={0.7}
                             >
@@ -143,7 +144,7 @@ export default function ProviderJobs() {
                         </View>
                     )}
                 </View>
-                <View style={{ height: 120 }} />
+                <View style={{ height: 20 }} />
             </ScrollView>
         </View>
     );
@@ -199,6 +200,13 @@ const styles = StyleSheet.create({
     scrollContent: {
         paddingHorizontal: 25,
     },
+    scrollContentLarge: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        paddingHorizontal: 20,
+        gap: 0,
+        alignItems: 'flex-start',
+    },
     jobList: {
         gap: 20,
     },
@@ -213,6 +221,11 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.02,
         shadowRadius: 10,
         elevation: 2,
+        marginBottom: 20,
+    },
+    jobCardLarge: {
+        width: '48%',
+        marginHorizontal: '1%',
     },
     jobCardTop: {
         flexDirection: 'row',

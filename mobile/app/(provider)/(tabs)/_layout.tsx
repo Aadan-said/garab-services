@@ -1,45 +1,68 @@
 import { Tabs } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { StyleSheet, Platform } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function ProviderLayout() {
+    const insets = useSafeAreaInsets();
+    const bottomPad = Math.max(insets.bottom, Platform.OS === 'android' ? 12 : 0);
+
     return (
         <Tabs
             screenOptions={{
                 headerShown: false,
-                tabBarStyle: styles.tabBar,
-                tabBarActiveTintColor: '#5c6bf0',
+                tabBarStyle: [styles.tabBar, { paddingBottom: bottomPad, height: 60 + bottomPad }],
+                tabBarActiveTintColor: '#6366f1',
                 tabBarInactiveTintColor: '#94a3b8',
-                tabBarShowLabel: false,
+                tabBarShowLabel: true,
+                tabBarLabelStyle: styles.tabLabel,
                 tabBarHideOnKeyboard: true,
+                tabBarItemStyle: styles.tabItem,
+                tabBarIconStyle: styles.tabIconWrapper,
             }}
         >
             <Tabs.Screen
                 name="home"
                 options={{
-                    title: 'Home',
-                    tabBarIcon: ({ color }) => <FontAwesome name="th-large" size={24} color={color} />,
+                    title: 'Hoyga',
+                    tabBarIcon: ({ color, focused }) => (
+                        <View style={[styles.iconWrap, focused && styles.activeIconWrap]}>
+                            <FontAwesome name="home" size={20} color={color} />
+                        </View>
+                    ),
                 }}
             />
             <Tabs.Screen
                 name="jobs"
                 options={{
-                    title: 'Jobs',
-                    tabBarIcon: ({ color }) => <FontAwesome name="briefcase" size={24} color={color} />,
+                    title: 'Shaqooyinka',
+                    tabBarIcon: ({ color, focused }) => (
+                        <View style={[styles.iconWrap, focused && styles.activeIconWrap]}>
+                            <FontAwesome name="briefcase" size={19} color={color} />
+                        </View>
+                    ),
                 }}
             />
             <Tabs.Screen
                 name="wallet"
                 options={{
-                    title: 'Wallet',
-                    tabBarIcon: ({ color }) => <FontAwesome name="bar-chart" size={24} color={color} />,
+                    title: 'Lacagta',
+                    tabBarIcon: ({ color, focused }) => (
+                        <View style={[styles.iconWrap, focused && styles.activeIconWrap]}>
+                            <FontAwesome name="bar-chart" size={19} color={color} />
+                        </View>
+                    ),
                 }}
             />
             <Tabs.Screen
                 name="profile"
                 options={{
-                    title: 'Profile',
-                    tabBarIcon: ({ color }) => <FontAwesome name="user" size={24} color={color} />,
+                    title: 'Profaylka',
+                    tabBarIcon: ({ color, focused }) => (
+                        <View style={[styles.iconWrap, focused && styles.activeIconWrap]}>
+                            <FontAwesome name="user" size={20} color={color} />
+                        </View>
+                    ),
                 }}
             />
         </Tabs>
@@ -48,19 +71,35 @@ export default function ProviderLayout() {
 
 const styles = StyleSheet.create({
     tabBar: {
-        position: 'absolute',
-        bottom: 0,
-        left: 20,
-        right: 20,
-        elevation: 0,
         backgroundColor: '#ffffff',
-        borderRadius: 25,
-        height: 70,
-        paddingBottom: Platform.OS === 'ios' ? 20 : 0,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 10 },
-        shadowOpacity: 0.1,
-        shadowRadius: 10,
-        borderTopWidth: 0,
-    }
+        borderTopWidth: 1,
+        borderTopColor: '#f1f5f9',
+        elevation: 12,
+        shadowColor: '#6366f1',
+        shadowOffset: { width: 0, height: -4 },
+        shadowOpacity: 0.08,
+        shadowRadius: 12,
+    },
+    tabItem: {
+        paddingTop: 6,
+    },
+    tabIconWrapper: {
+        width: 52,
+        height: 30,
+    },
+    tabLabel: {
+        fontSize: 10,
+        fontWeight: '700',
+        marginTop: 2,
+    },
+    iconWrap: {
+        width: 48,
+        height: 28,
+        borderRadius: 14,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    activeIconWrap: {
+        backgroundColor: '#eef2ff',
+    },
 });

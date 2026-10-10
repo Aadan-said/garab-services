@@ -153,7 +153,7 @@ export default function CreateRequestScreen() {
                     )}
                 </TouchableOpacity>
 
-                <View style={{ height: 120 }} />
+                <View style={{ height: 30 }} />
             </ScrollView>
         </View>
     );

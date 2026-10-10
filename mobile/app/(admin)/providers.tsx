@@ -308,7 +308,7 @@ const styles = StyleSheet.create({
         borderColor: '#fecaca',
     },
     btnGradient: {
-        ...StyleSheet.absoluteFillObject,
+        ...StyleSheet.absoluteFill,
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',

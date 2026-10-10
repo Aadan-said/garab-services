@@ -1,4 +1,5 @@
-import { View, ActivityIndicator, Text, StyleSheet, Dimensions } from 'react-native';
+import { View, ActivityIndicator, Text, StyleSheet, Dimensions, Image } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import { Redirect } from 'expo-router';
 import { useAuthStore } from '../src/store/auth.store';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -12,14 +13,36 @@ export default function Index() {
         return (
             <View style={styles.container}>
                 <LinearGradient
-                    colors={['#1a2138', '#0f172a']}
+                    colors={['#0f172a', '#1e1b4b', '#0f172a']}
                     style={StyleSheet.absoluteFill}
                 />
-                <View style={styles.content}>
-                    <ActivityIndicator size="large" color="#5c6bf0" />
-                    <Text style={styles.appTitle}>FARSAMO YAQAN</Text>
-                    <Text style={styles.tagline}>Xal deg deg ah...</Text>
-                </View>
+                <Animatable.View
+                    animation="fadeIn"
+                    duration={800}
+                    style={styles.content}
+                >
+                    <Animatable.View
+                        animation="pulse"
+                        iterationCount="infinite"
+                        duration={2500}
+                        style={styles.logoContainer}
+                    >
+                        <Image
+                            source={require('../assets/splash-icon.png')}
+                            style={styles.logo}
+                            resizeMode="contain"
+                        />
+                    </Animatable.View>
+
+                    <Animatable.Text animation="fadeInUp" delay={200} style={styles.appTitle}>
+                        FARSAMO YAQAN
+                    </Animatable.Text>
+                    <Animatable.Text animation="fadeInUp" delay={400} style={styles.tagline}>
+                        GARAB SERVICES
+                    </Animatable.Text>
+
+                    <ActivityIndicator size="small" color="#6366f1" style={{ marginTop: 24 }} />
+                </Animatable.View>
             </View>
         );
     }
@@ -44,29 +67,38 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#1a2138',
+        backgroundColor: '#0f172a',
     },
     content: {
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 10,
     },
+    logoContainer: {
+        width: 140,
+        height: 140,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 16,
+    },
+    logo: {
+        width: 130,
+        height: 130,
+    },
     appTitle: {
-        fontSize: 32,
+        fontSize: 28,
         fontWeight: '900',
         color: '#fff',
-        letterSpacing: 2,
+        letterSpacing: 3,
         textAlign: 'center',
-        lineHeight: 40,
-        marginTop: 10,
+        marginTop: 6,
     },
     tagline: {
-        color: '#94a3b8',
+        color: '#818cf8',
         fontSize: 12,
         fontWeight: '700',
-        marginTop: 15,
+        marginTop: 6,
         letterSpacing: 4,
         textTransform: 'uppercase',
-        opacity: 0.8,
     },
 });

@@ -1,17 +1,28 @@
-import * as Notifications from 'expo-notifications';
 import * as Device from 'expo-device';
 import { Platform } from 'react-native';
 import Constants from 'expo-constants';
+import { isRunningInExpoGo } from 'expo';
 import { notificationStorage } from './notification-storage.service';
 
-// Configure how notifications are handled when app is in foreground
-Notifications.setNotificationHandler({
-    handleNotification: async () => ({
-        shouldShowAlert: true,
-        shouldPlaySound: true,
-        shouldSetBadge: true,
-    }),
-});
+// Safe dynamic loader to avoid native crashes in Expo Go (Expo removed FCM push from Expo Go in SDK 53+)
+let Notifications: typeof import('expo-notifications') | null = null;
+
+try {
+    if (!isRunningInExpoGo()) {
+        Notifications = require('expo-notifications');
+        Notifications?.setNotificationHandler?.({
+            handleNotification: async () => ({
+                shouldShowAlert: true,
+                shouldShowBanner: true,
+                shouldShowList: true,
+                shouldPlaySound: true,
+                shouldSetBadge: true,
+            }),
+        });
+    }
+} catch (e) {
+    console.warn('[NotificationService] Native notifications not loaded in current environment');
+}
 
 export interface NotificationData {
     type: 'DEPOSIT' | 'WITHDRAWAL' | 'TRANSFER' | 'JOB_ACCEPTED' | 'JOB_REJECTED' | 'JOB_COMPLETED' | 'NEW_REQUEST' | 'PAYMENT_RECEIVED';
@@ -27,17 +38,36 @@ class NotificationService {
      * Register for push notifications and get Expo push token
      */
     async registerForPushNotifications(): Promise<string | null> {
+        if (isRunningInExpoGo()) {
+            console.log('[NotificationService] Push notifications are not supported in Expo Go (SDK 53+). They will work in a standalone/development build.');
+            return null;
+        }
+
         if (!Device.isDevice) {
             console.log('Push notifications only work on physical devices');
             return null;
         }
 
+        if (!Notifications) {
+            try {
+                Notifications = require('expo-notifications');
+            } catch (e) {
+                return null;
+            }
+        }
+
+        if (!Notifications) {
+            return null;
+        }
+
+        const notif = Notifications;
+
         try {
-            const { status: existingStatus } = await Notifications.getPermissionsAsync();
+            const { status: existingStatus } = await notif.getPermissionsAsync();
             let finalStatus = existingStatus;
 
             if (existingStatus !== 'granted') {
-                const { status } = await Notifications.requestPermissionsAsync();
+                const { status } = await notif.requestPermissionsAsync();
                 finalStatus = status;
             }
 
@@ -54,7 +84,7 @@ class NotificationService {
                 return null;
             }
 
-            const token = await Notifications.getExpoPushTokenAsync({
+            const token = await notif.getExpoPushTokenAsync({
                 projectId,
             });
 
@@ -63,9 +93,9 @@ class NotificationService {
 
             // Configure notification channel for Android
             if (Platform.OS === 'android') {
-                await Notifications.setNotificationChannelAsync('default', {
+                await notif.setNotificationChannelAsync('default', {
                     name: 'Default',
-                    importance: Notifications.AndroidImportance.MAX,
+                    importance: notif.AndroidImportance.MAX,
                     vibrationPattern: [0, 250, 250, 250],
                     lightColor: '#5c6bf0',
                     sound: 'default',
@@ -84,7 +114,7 @@ class NotificationService {
      */
     async sendLocalNotification(notification: NotificationData) {
         try {
-            // Save to storage for in-app notifications list
+            // Save to storage for in-app notifications list (always works)
             await notificationStorage.saveNotification({
                 type: notification.type,
                 title: notification.title,
@@ -92,17 +122,19 @@ class NotificationService {
                 data: notification.data,
             });
 
-            // Send push notification
-            await Notifications.scheduleNotificationAsync({
-                content: {
-                    title: notification.title,
-                    body: notification.body,
-                    data: { ...notification.data, type: notification.type },
-                    sound: 'default',
-                    badge: 1,
-                },
-                trigger: null, // Show immediately
-            });
+            // Send native notification if supported outside of Expo Go
+            if (Notifications && !isRunningInExpoGo()) {
+                await Notifications.scheduleNotificationAsync({
+                    content: {
+                        title: notification.title,
+                        body: notification.body,
+                        data: { ...notification.data, type: notification.type },
+                        sound: 'default',
+                        badge: 1,
+                    },
+                    trigger: null, // Show immediately
+                });
+            }
         } catch (error) {
             console.error('Error sending local notification:', error);
         }
@@ -215,21 +247,28 @@ class NotificationService {
      * Clear all notifications
      */
     async clearAllNotifications() {
-        await Notifications.dismissAllNotificationsAsync();
+        if (Notifications) {
+            await Notifications.dismissAllNotificationsAsync();
+        }
     }
 
     /**
      * Get notification badge count
      */
     async getBadgeCount(): Promise<number> {
-        return await Notifications.getBadgeCountAsync();
+        if (Notifications) {
+            return await Notifications.getBadgeCountAsync();
+        }
+        return 0;
     }
 
     /**
      * Set notification badge count
      */
     async setBadgeCount(count: number) {
-        await Notifications.setBadgeCountAsync(count);
+        if (Notifications) {
+            await Notifications.setBadgeCountAsync(count);
+        }
     }
 }
 

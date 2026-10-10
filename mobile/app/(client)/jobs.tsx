@@ -10,6 +10,7 @@ import { ReviewModal } from '../../src/components/ReviewModal';
 import { VerifiedBadge } from '../../src/components/VerifiedBadge';
 
 const { width } = Dimensions.get('window');
+const isLargeScreen = width >= 600;
 
 const FILTERS = [
     { id: 'all', label: 'Dhamaan' },
@@ -126,11 +127,11 @@ export default function JobsScreen() {
             <Modal
                 visible={showModal}
                 transparent={true}
-                animationType="slide"
+                animationType={isLargeScreen ? 'fade' : 'slide'}
                 onRequestClose={() => setShowModal(false)}
             >
-                <View style={styles.modalOverlay}>
-                    <View style={styles.modalContent}>
+                <View style={[styles.modalOverlay, isLargeScreen && styles.modalOverlayLarge]}>
+                    <View style={[styles.modalContent, isLargeScreen && styles.modalContentLarge]}>
                         <View style={styles.modalHeader}>
                             <View style={styles.modalHandle} />
                             <TouchableOpacity style={styles.closeBtn} onPress={() => setShowModal(false)}>
@@ -370,13 +371,13 @@ export default function JobsScreen() {
             </View>
 
             <ScrollView
-                contentContainerStyle={styles.scrollContent}
+                contentContainerStyle={[styles.scrollContent, isLargeScreen && styles.scrollContentLarge]}
                 refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
                 showsVerticalScrollIndicator={false}
             >
                 {filteredRequests.length > 0 ? (
                     filteredRequests.map((req) => (
-                        <TouchableOpacity key={req.id} style={styles.jobCard} onPress={() => handleOpenDetails(req)}>
+                        <TouchableOpacity key={req.id} style={[styles.jobCard, isLargeScreen && styles.jobCardLarge]} onPress={() => handleOpenDetails(req)}>
                             <View style={styles.jobHeader}>
                                 <View style={styles.categoryTag}>
                                     <Text style={styles.categoryTagText}>{req.category?.toUpperCase() || 'GENERAL'}</Text>
@@ -423,7 +424,7 @@ export default function JobsScreen() {
                         <Text style={styles.emptyStateText}>Ma jiraan codsiyo yala suuqa</Text>
                     </View>
                 )}
-                <View style={{ height: 100 }} />
+                <View style={{ height: 20 }} />
             </ScrollView>
         </View>
     );
@@ -483,6 +484,13 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         gap: 20,
     },
+    scrollContentLarge: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        paddingHorizontal: 24,
+        gap: 0,
+        alignItems: 'flex-start',
+    },
     jobCard: {
         backgroundColor: '#fff',
         borderRadius: 24,
@@ -492,6 +500,11 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.03,
         shadowRadius: 10,
         elevation: 2,
+    },
+    jobCardLarge: {
+        width: '48%',
+        marginHorizontal: '1%',
+        marginBottom: 20,
     },
     jobHeader: {
         flexDirection: 'row',
@@ -613,8 +626,12 @@ const styles = StyleSheet.create({
     },
     modalOverlay: {
         flex: 1,
-        backgroundColor: 'rgba(0,0,0,0.5)',
+        backgroundColor: 'rgba(0,0,0,0.55)',
         justifyContent: 'flex-end',
+    },
+    modalOverlayLarge: {
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     modalContent: {
         backgroundColor: '#fff',
@@ -622,6 +639,12 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 35,
         height: '90%',
         paddingTop: 15,
+    },
+    modalContentLarge: {
+        borderRadius: 28,
+        height: '85%',
+        width: '60%',
+        maxWidth: 680,
     },
     modalHeader: {
         alignItems: 'center',
